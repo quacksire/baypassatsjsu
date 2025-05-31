@@ -21,54 +21,169 @@ import transitlogo from "../assets/supporters/transit.png"
 <Layout>
 	<main>
 		<HeroSectionBaypass />
-		<section class="w-full px-6 py-16 md:px-12 lg:px-24">
-			<h2 class="text-center text-6xl font-semibold tracking-tight text-black mb-12" id="why">
-				Why we’re here
-			</h2>
-			<div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-				<div class="md:w-1/2 text-5xl font-bold text-black">
-					SJSU has a<br />car problem.
+		<section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+
+			<div class="mb-8 mt-[-1] w-full text-center">
+				<h2 class="text-4xl font-semibold text-white">
+					SJSU has a
+				</h2>
+				<h3
+					class="mt-2 text-6xl md:text-8xl font-extrabold uppercase text-sjsugold
+               drop-shadow-[3px_3px_0_theme(colors.yellow.700)] underline
+               decoration-4 underline-offset-8"
+				>
+					Car Problem
+				</h3>
+			</div>
+
+			<div class="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
+				<!-- Left: Heading + Image -->
+				<div class="md:w-1/2 flex justify-center">
+					<img
+						src="/assets/car-traffic.jpg"
+						alt="Heavy traffic near campus"
+						class=" h-64 w-full rounded-lg border-4 border-sjsugold object-cover shadow-lg"
+					/>
 				</div>
-				<div class="md:w-1/2 text-lg text-neutral-700 ">
+
+				<!-- Right: Body Text -->
+				<div class="md:w-1/2 text-white text-lg space-y-6">
 					<p>
 						As a predominantly commuter school, San Jose State University has
 						students coming to study from all across the Bay Area.
-						Many students cannot afford to drive to campus, and have to pay <strong>over
-							$2,000 out-of-pocket per semester for train &amp; bus fares just to get to class </strong>.
+						<strong class="text-sjsugold">
+							Many students cannot afford to drive to campus, and have to pay over
+							$2,000 out-of-pocket per semester for train & bus fares just to get to class.
+						</strong>
 						Those who drive have to spend over 20 minutes finding a spot in
 						overcrowded parking garages.
 					</p>
-					<p class="mt-6">
-						And the problem isn't going away. As more students return to in-person classes, the cost and chaos of commuting is putting pressure on students' time, wallets, and mental health. <strong>Transit should be a basic part of showing up to class, not a privilege.</strong>
+					<!--<p>
+						And the problem isn’t going away. As more students return to in-person
+						classes, the cost and chaos of commuting is putting pressure on
+						students’ time, wallets, and mental health.
+						<strong class="text-sjsugold">
+							Transit should be a basic part of showing up to class, not a privilege.
+						</strong>
 					</p>
+					-->
 				</div>
 			</div>
 		</section>
 
 
-		<section class="w-full px-6 py-16 md:px-12 lg:px-24">
-			<h2 class="mb-12 text-center text-6xl font-semibold tracking-tight text-black">
-				The solution
+		<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
+			<!-- Heading -->
+			<h2 class="text-center text-6xl font-extrabold uppercase text-sjsublue drop-shadow-[2px_2px_0_theme(colors.blue.200)] mb-8">
+				The Solution?
 			</h2>
+
+			<!-- Centered Clipper BayPass Logo -->
+			<div class="flex justify-center mb-12">
+				<img
+					src={clipperbaypasslogo.src}
+					alt="Clipper BayPass Logo"
+					class="h-24 md:h-32 w-auto"
+				/>
+			</div>
+
+			<!-- Two-column layout: Text on left, Image on right -->
 			<div class="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
-				<div class="md:w-1/2 text-lg text-neutral-700 ">
+				<!-- Left: Text Block -->
+				<div class="md:w-1/2 text-lg text-black space-y-6">
 					<p>
-						<strong>Clipper BayPass</strong> is an unlimited transit pass that provides
-						<strong> access to all bus, rail, and ferry services</strong> across the Bay Area,
-						including <strong>VTA, BART, Caltrain, AC Transit</strong>, and more. With BayPass,
+						<strong class="text-sjsublue font-extrabold">Clipper BayPass</strong> is an unlimited transit pass that provides
+						<strong class="text-sjsublue font-extrabold"> access to all bus, rail, and ferry services</strong> across the Bay Area,
+						including <strong class="text-sjsublue font-extrabold">VTA, BART, Caltrain, AC Transit</strong>, and more. With BayPass,
 						students get unlimited rides on public transit for only
-						<strong> $25 per semester</strong>.
+						<strong class="text-sjsublue font-extrabold">$25 per semester</strong>.
 					</p>
-					<p class="mt-6">
-						<strong>BayPass</strong> isn't just about getting from point A to B. It's about unlocking the full Bay Area for students who otherwise couldn’t afford it. Whether it's a job interview in Palo Alto, an event in Oakland, or a research trip in San Francisco, <strong>BayPass turns those into real options</strong>.
+					<p>
+						<strong class="text-sjsublue font-extrabold">BayPass</strong> isn’t just about getting from point A to B. It’s about unlocking
+						the full Bay Area for students who otherwise couldn’t afford it. Whether it’s a job interview in Palo Alto,
+						an event in Oakland, or a research trip in San Francisco, <strong class="text-sjsublue font-extrabold">BayPass turns those into real options</strong>.
 					</p>
 				</div>
+
+				<!-- Right: Image -->
 				<div class="md:w-1/2 flex justify-center">
 					<img
-						src={clipperbaypasslogo.src}
-						alt="Clipper BayPass Logo"
-						class="w-64 md:w-80 h-auto"
+						src="/assets/clipper-validator.jpg"
+					alt="Student tapping Clipper card at validator"
+					class="w-full max-w-sm rounded-lg border-4 border-sjsugold object-cover shadow-lg"
 					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+			<!-- Section Title -->
+			<h2 class="text-center text-6xl mt-2 text-6xl md:text-7xl font-extrabold uppercase text-white drop-shadow-[3px_3px_0_theme(colors.yellow.700)] mb-10">
+				Students <span class="text-sjsugold drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">Want BayPass</span>
+			</h2>
+
+			<!-- Statistics Cards Container -->
+			<div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
+				<!-- Card 1 -->
+				<div class="w-full sm:w-1/3 bg-white rounded-lg p-8 shadow-lg drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">
+					<h3 class="text-6xl font-extrabold text-sjsugold drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">
+						86%
+					</h3>
+					<p class="mt-4 text-lg text-clipper text-center">
+						of students use public transportation very frequently
+					</p>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="w-full sm:w-1/3 bg-white rounded-lg p-8 shadow-lg drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">
+					<h3 class="text-6xl font-extrabold text-sjsugold drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">
+						61%
+					</h3>
+					<p class="mt-4 text-lg text-clipper text-center">
+						of students spend more than the cost of BayPass on transit fares monthly
+					</p>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="w-full sm:w-1/3 bg-white rounded-lg p-8 shadow-lg drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">
+					<h3 class="text-6xl font-extrabold text-sjsugold drop-shadow-[3px_3px_0_theme(colors.yellow.700)]">
+						30%
+					</h3>
+					<p class="mt-4 text-lg text-clipper text-center">
+						of students’ main issue with transit can be solved with BayPass
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+				<!-- Left: Profile Image -->
+				<div class="flex-shrink-0">
+					<img
+						src="/assets/person.jpg"
+					alt="Name of Person"
+					class="h-48 w-48 rounded-full border-4 border-yellow-400 object-cover"
+					/>
+				</div>
+
+				<!-- Right: Name + Quote -->
+				<div class="flex-grow">
+					<!-- Name -->
+					<h3
+						class="text-5xl font-extrabold text-sjsugold drop-shadow-[2px_2px_0_theme(colors.yellow.700)]"
+					>
+						NAME OF PERSON
+					</h3>
+
+					<!-- Quote -->
+					<p class="mt-6 text-2xl font-medium leading-relaxed flex items-start">
+						<span class="text-6xl leading-none mr-2">“</span>
+						<span class="text-clipper">
+          					Insert a quote from a person who has measurably benefited from BayPass.
+        				</span>
+						<span class="text-6xl leading-none ml-2">”</span>
+					</p>
 				</div>
 			</div>
 		</section>
@@ -76,26 +191,29 @@ import transitlogo from "../assets/supporters/transit.png"
 		<TimelineBaypass />
 
 		<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24" id="who">
-			<h2 class="text-center text-6xl font-semibold tracking-tight text-black mb-12">
+			<!-- Section Title -->
+			<h2 class="text-center text-6xl font-extrabold text-sjsublue drop-shadow-[2px_2px_0_theme(colors.blue.700)] mb-12">
 				Who we are
 			</h2>
 
-			<p class="mx-auto max-w-4xl text-center text-2xl text-black font-light leading-relaxed mb-20">
-				We are <strong class="font-semibold">independent undergraduate students</strong> at SJSU who think <strong class="font-semibold">access to education should be a right</strong> — not dependent on owning a car.
+			<!-- Description -->
+			<p class="mx-auto max-w-4xl text-center text-2xl text-clipper font-light leading-relaxed mb-20">
+				We are <strong class="font-extrabold">independent undergraduate students</strong> at SJSU who think <strong class="font-extrabold">access to education should be a <strong class="text-sjsugold">RIGHT</strong></strong> — not dependent on owning a car.
 			</p>
 
+			<!-- Profiles -->
 			<div class="flex flex-row flex-wrap justify-center gap-12">
 				<!-- Sam Jeffs -->
 				<div class="flex flex-col items-center text-center w-40">
-					<!-- TODO: Add Sam Pic -->
 					<img
-
-						src=""
-						alt="Sam Jeffs"
-						class="h-40 w-40 rounded-full object-cover"
+						src="/assets/sam-jeffs.jpg"
+					alt="Sam Jeffs"
+					class="h-40 w-40 rounded-full border-4 border-yellow-400 object-cover drop-shadow-lg"
 					/>
-					<h3 class="mt-4 text-xl font-bold text-black">Sam Jeffs</h3>
-					<p class="mt-1 text-lg text-neutral-700 leading-tight">
+					<h3 class="mt-4 text-2xl font-extrabold text-sjsugold uppercase">
+						Sam Jeffs
+					</h3>
+					<p class="mt-1 text-lg text-blue-600 leading-tight">
 						this is the part<br />
 						where we flex<br />
 						about ourselves
@@ -103,7 +221,7 @@ import transitlogo from "../assets/supporters/transit.png"
 					<div class="mt-3 flex gap-3">
 						<a
 							href="mailto:sam@example.com"
-							class="text-neutral-700 hover:text-blue-600 transition"
+							class="hover:text-blue-800 transition"
 							aria-label="Email Sam"
 						>
 							<IconMail class="w-5 h-5" />
@@ -112,7 +230,7 @@ import transitlogo from "../assets/supporters/transit.png"
 							href="https://www.linkedin.com/in/sam-jeffs"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-neutral-700 hover:text-blue-600 transition"
+							class="hover:text-blue-800 transition"
 							aria-label="Sam's LinkedIn"
 						>
 							<IconBrandLinkedin class="w-5 h-5" />
@@ -122,14 +240,15 @@ import transitlogo from "../assets/supporters/transit.png"
 
 				<!-- Zyjay Cruz -->
 				<div class="flex flex-col items-center text-center w-40">
-					<!-- TODO: Add Zyjay Pic -->
 					<img
-						src=""
-						alt="Zyjay Cruz"
-						class="h-40 w-40 rounded-full object-cover"
+						src="/assets/zyjay-cruz.jpg"
+					alt="Zyjay Cruz"
+					class="h-40 w-40 rounded-full border-4 border-yellow-400 object-cover drop-shadow-lg"
 					/>
-					<h3 class="mt-4 text-xl font-bold text-black">Zyjay Cruz</h3>
-					<p class="mt-1 text-lg text-neutral-700 leading-tight">
+					<h3 class="mt-4 text-2xl font-extrabold text-sjsugold uppercase">
+						Zyjay Cruz
+					</h3>
+					<p class="mt-1 text-lg text-blue-600 leading-tight">
 						this is the part<br />
 						where we flex<br />
 						about ourselves
@@ -137,7 +256,7 @@ import transitlogo from "../assets/supporters/transit.png"
 					<div class="mt-3 flex gap-3">
 						<a
 							href="mailto:zyjay@example.com"
-							class="text-neutral-700 hover:text-blue-600 transition"
+							class="hover:text-blue-800 transition"
 							aria-label="Email Zyjay"
 						>
 							<IconMail class="w-5 h-5" />
@@ -146,7 +265,7 @@ import transitlogo from "../assets/supporters/transit.png"
 							href="https://www.linkedin.com/in/zyjay"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-neutral-700 hover:text-blue-600 transition"
+							class="hover:text-blue-800 transition"
 							aria-label="Zyjay's LinkedIn"
 						>
 							<IconBrandLinkedin class="w-5 h-5" />
@@ -157,12 +276,14 @@ import transitlogo from "../assets/supporters/transit.png"
 		</section>
 
 
-		<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
-			<h2 class="text-center text-6xl font-semibold tracking-tight text-black mb-12">
+		<section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+			<!-- Section Title (white text with thick yellow drop shadow) -->
+			<h2 class="text-center text-6xl font-extrabold text-sjsugold drop-shadow-[2px_2px_0_theme(colors.yellow.700)] mb-12">
 				Our supporters
 			</h2>
 
-			<div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-10">
+			<!-- White rounded container with yellow “shadow” for logos -->
+			<div class="mx-auto max-w-5xl bg-white rounded-xl p-6 flex flex-wrap justify-center items-center gap-x-8 gap-y-8 drop-shadow-[4px_4px_0_theme(colors.yellow.600)]">
 				<a href="https://www.transbaycoalition.org/" target="_blank" rel="noopener noreferrer">
 					<img src={transbaylogo.src} alt="Transbay Coalition" class="h-10 w-auto" />
 				</a>

@@ -14,43 +14,32 @@ export default function HeroSectionBaypass() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/10 -z-10" />
+            <div className="absolute inset-0 bg-black/60 -z-10"/>
 
             {/* Hero Content */}
-            <div className="flex h-full items-center px-8 py-50 md:px-32 lg:px-64">
-                <div className="max-w-xl text-white">
-                    <h1 className="text-4xl font-medium md:text-5xl lg:text-6xl leading-tight text-shadow-2xl">
-                        <span className="font-light">
-                          <span className="underline decoration-yellow-400 underline-offset-4">Spartans</span> deserve
-                        </span>
-                        <br />
-                        <span className="font-extrabold">affordable and</span><br />
-                        <span className="font-extrabold">equitable transit.</span>
+            <div className="flex h-screen items-center px-8 md:px-16 lg:px-32">
+                <div className="max-w-4xl text-white">
+                    <p className="text-4xl md:text-5xl font-medium mb-2">
+                    <span className="underline decoration-yellow-400 decoration-4 underline-offset-4">
+                      Spartans
+                    </span>{" "}
+                        deserve
+                    </p>
+
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight leading-tight text-white drop-shadow-[3px_3px_0_theme(colors.orange.400)]">
+                        Affordable and<br/>
+                        Equitable Transit.
                     </h1>
 
-                    <div className="mt-8">
+                    <div className="mt-10">
                         <a
                             href="#"
-                            className="inline-block rounded-full bg-blue-700 px-6 py-3 text-lg font-semibold text-white hover:bg-blue-800"
+                            className="inline-block rounded-full bg-blue-700 px-8 py-4 text-sm md:text-base font-semibold uppercase tracking-wide text-white hover:bg-blue-800 transition"
                         >
-                            Sign The Petition
+                            Sign the Petition
                         </a>
                     </div>
                 </div>
-            </div>
-
-            {/* i wanna add a "learn more" chevron in the center of the bottom edge of the section that scrolls down to #info */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-                <a
-                    href="#why"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        document.querySelector('#why')?.scrollIntoView({behavior: 'smooth'});
-                    }}
-                    className="inline-block rounded-full bg-white/20 px-4 py-2 text-lg font-semibold text-white hover:bg-white/30 transition-colors"
-                >
-                    Learn More
-                </a>
             </div>
 
         </section>

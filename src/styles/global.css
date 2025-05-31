@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+    --color-clipper: #1A5BB4;
+    --color-gold: #FEBE30;
+
+    --color-sjsublue: #0055A2;
+    --color-sjsugold: #E5A823;
+    --color-sjsugrey: #939597;
+    --color-sjsudarkgrey: #53565A;
+
+    --color-sjsuadalightgrey: #D2D2D2;
+    --color-sjsuadadarkgrey: #666666;
+    --color-sjsurolloverblue: #1C88F4;
+
+
+}
