@@ -2,6 +2,7 @@
 import './src/styles/global.css';
 
 import NavbarBaypass from "../components/NavBar"
+import {IconBrandInstagram, IconBrandBluesky, IconArrowUp, IconMail} from "@tabler/icons-react";
 ---
 
 <!doctype html>
@@ -11,12 +12,62 @@ import NavbarBaypass from "../components/NavBar"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>BayPass at SJSU</title>
 	</head>
 	<body class="bg-white text-black">
-	<NavbarBaypass />
-	<slot />
+		<NavbarBaypass />
+		<slot />
 	</body>
+
+	<footer class="w-full bg-neutral-100 text-neutral-800 px-6 py-12 md:px-12 lg:px-24">
+		<div class="w-full mx-auto flex flex-col items-center justify-between">
+			{/* Left: Copyright */}
+			<p class="text-sm text-center md:text-left">
+				© {new Date().getFullYear()} BayPass at SJSU.
+			</p>
+
+			{/* Center: Socials */}
+			<div class="flex gap-6 items-center m-6">
+				<a
+					href="https://bsky.app/profile/baypassatsjsu.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hover:text-blue-600 transition"
+				>
+					<IconBrandBluesky class="w-5 h-5" />
+				</a>
+
+				<a
+					href="https://instagram.com/baypassatsjsu"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hover:text-pink-500 transition"
+				>
+					<IconBrandInstagram class="w-5 h-5" />
+				</a>
+
+				<a
+					href="mailto:hi@baypassatsjsu.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hover:text-blue-600 transition"
+				>
+					<IconMail class="w-5 h-5" />
+				</a>
+			</div>
+
+			{/* Right: Actions */}
+			<div class="flex gap-4 items-center">
+				<a
+					href="#"
+					class="flex items-center gap-1 text-sm text-neutral-800 hover:text-blue-600 transition"
+				>
+					<IconArrowUp className="w-4 h-4" />
+					Back to top
+				</a>
+			</div>
+		</div>
+	</footer>
 </html>
 
 <style>

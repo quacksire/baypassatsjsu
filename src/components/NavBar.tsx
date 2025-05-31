@@ -11,7 +11,7 @@ export default function NavbarBaypass() {
                 <ul className="flex gap-8 text-sm font-medium">
                     <li><a href="#" className="hover:underline">Home</a></li>
                     <li><a href="#" className="hover:underline">Petition</a></li>
-                    <li><a href="#" className="hover:underline">About Us</a></li>
+                    <li><a href="/#who" className="hover:underline">About Us</a></li>
                 </ul>
             </nav>
             <script>

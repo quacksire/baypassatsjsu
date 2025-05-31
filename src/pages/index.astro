@@ -1,52 +1,28 @@
 ---
-import NavbarBaypass from "../components/NavBar";
 import HeroSectionBaypass from "../components/HeroSectionBaypass";
-import Layout from "../layouts/Layout.astro";
-import SideBySideSection from "../components/SideBySideSection";
-import {Fragment} from "astro/jsx-runtime";
+import TimelineBaypass from "../components/TimelineBayPass";
 
-import {StickyScroll} from "../components/ui/sticky-scroll-reveal";
+import Layout from "../layouts/Layout.astro";
+import {Fragment} from "astro/jsx-runtime";
 
 import clipperbaypasslogo from "../assets/Clipper-BayPass_Logo.png"
 
+import { IconMail, IconBrandLinkedin } from "@tabler/icons-react";
 
-const content = [
-	{
-		title: "Collaborative Editing",
-		description:
-			"Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-	},
-{
-	title: "Real time changes",
-		description:
-	"See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-},
-{
-	title: "Version control",
-		description:
-	"Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+import catenarylogo from "../assets/supporters/catenary.png"
+import scc4transitlogo from "../assets/supporters/scc4transit.png"
+import seamlesslogo from "../assets/supporters/seamless.png"
+import transbaylogo from "../assets/supporters/transbay.png"
+import transitlogo from "../assets/supporters/transit.png"
 
-},
-{
-	title: "Running out of content",
-		description:
-	"Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-},
-];
 ---
 
 
 <Layout>
 	<main>
 		<HeroSectionBaypass />
-
-		<div class="w-full py-4">
-			<StickyScroll content={content} />
-		</div>
-
-
 		<section class="w-full px-6 py-16 md:px-12 lg:px-24">
-			<h2 class="mb-12 text-center text-4xl font-semibold tracking-tight text-black" id="why">
+			<h2 class="text-center text-6xl font-semibold tracking-tight text-black mb-12" id="why">
 				Why we’re here
 			</h2>
 			<div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
@@ -57,12 +33,13 @@ const content = [
 					<p>
 						As a predominantly commuter school, San Jose State University has
 						students coming to study from all across the Bay Area.
-						<strong>
-							Many students cannot afford to drive to campus, and have to pay over
-							$2,000 out-of-pocket per semester for train &amp; bus fares.
-						</strong>{" "}
+						Many students cannot afford to drive to campus, and have to pay <strong>over
+							$2,000 out-of-pocket per semester for train &amp; bus fares just to get to class </strong>.
 						Those who drive have to spend over 20 minutes finding a spot in
 						overcrowded parking garages.
+					</p>
+					<p class="mt-6">
+						And the problem isn't going away. As more students return to in-person classes, the cost and chaos of commuting is putting pressure on students' time, wallets, and mental health. <strong>Transit should be a basic part of showing up to class, not a privilege.</strong>
 					</p>
 				</div>
 			</div>
@@ -82,6 +59,9 @@ const content = [
 						students get unlimited rides on public transit for only
 						<strong> $25 per semester</strong>.
 					</p>
+					<p class="mt-6">
+						<strong>BayPass</strong> isn't just about getting from point A to B. It's about unlocking the full Bay Area for students who otherwise couldn’t afford it. Whether it's a job interview in Palo Alto, an event in Oakland, or a research trip in San Francisco, <strong>BayPass turns those into real options</strong>.
+					</p>
 				</div>
 				<div class="md:w-1/2 flex justify-center">
 					<img
@@ -93,5 +73,112 @@ const content = [
 			</div>
 		</section>
 
+		<TimelineBaypass />
+
+		<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24" id="who">
+			<h2 class="text-center text-6xl font-semibold tracking-tight text-black mb-12">
+				Who we are
+			</h2>
+
+			<p class="mx-auto max-w-4xl text-center text-2xl text-black font-light leading-relaxed mb-20">
+				We are <strong class="font-semibold">independent undergraduate students</strong> at SJSU who think <strong class="font-semibold">access to education should be a right</strong> — not dependent on owning a car.
+			</p>
+
+			<div class="flex flex-row flex-wrap justify-center gap-12">
+				<!-- Sam Jeffs -->
+				<div class="flex flex-col items-center text-center w-40">
+					<!-- TODO: Add Sam Pic -->
+					<img
+
+						src=""
+						alt="Sam Jeffs"
+						class="h-40 w-40 rounded-full object-cover"
+					/>
+					<h3 class="mt-4 text-xl font-bold text-black">Sam Jeffs</h3>
+					<p class="mt-1 text-lg text-neutral-700 leading-tight">
+						this is the part<br />
+						where we flex<br />
+						about ourselves
+					</p>
+					<div class="mt-3 flex gap-3">
+						<a
+							href="mailto:sam@example.com"
+							class="text-neutral-700 hover:text-blue-600 transition"
+							aria-label="Email Sam"
+						>
+							<IconMail class="w-5 h-5" />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/sam-jeffs"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-neutral-700 hover:text-blue-600 transition"
+							aria-label="Sam's LinkedIn"
+						>
+							<IconBrandLinkedin class="w-5 h-5" />
+						</a>
+					</div>
+				</div>
+
+				<!-- Zyjay Cruz -->
+				<div class="flex flex-col items-center text-center w-40">
+					<!-- TODO: Add Zyjay Pic -->
+					<img
+						src=""
+						alt="Zyjay Cruz"
+						class="h-40 w-40 rounded-full object-cover"
+					/>
+					<h3 class="mt-4 text-xl font-bold text-black">Zyjay Cruz</h3>
+					<p class="mt-1 text-lg text-neutral-700 leading-tight">
+						this is the part<br />
+						where we flex<br />
+						about ourselves
+					</p>
+					<div class="mt-3 flex gap-3">
+						<a
+							href="mailto:zyjay@example.com"
+							class="text-neutral-700 hover:text-blue-600 transition"
+							aria-label="Email Zyjay"
+						>
+							<IconMail class="w-5 h-5" />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/zyjay"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-neutral-700 hover:text-blue-600 transition"
+							aria-label="Zyjay's LinkedIn"
+						>
+							<IconBrandLinkedin class="w-5 h-5" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
+			<h2 class="text-center text-6xl font-semibold tracking-tight text-black mb-12">
+				Our supporters
+			</h2>
+
+			<div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-10">
+				<a href="https://www.transbaycoalition.org/" target="_blank" rel="noopener noreferrer">
+					<img src={transbaylogo.src} alt="Transbay Coalition" class="h-10 w-auto" />
+				</a>
+				<a href="https://www.seamlessbayarea.org/" target="_blank" rel="noopener noreferrer">
+					<img src={seamlesslogo.src} alt="Seamless Bay Area" class="h-10 w-auto" />
+				</a>
+				<a href="https://scc4transit.org/" target="_blank" rel="noopener noreferrer">
+					<img src={scc4transitlogo.src} alt="SCC 4 Transit" class="h-10 w-auto" />
+				</a>
+				<a href="https://catenarymaps.org/" target="_blank" rel="noopener noreferrer">
+					<img src={catenarylogo.src} alt="Catenary" class="h-10 w-auto" />
+				</a>
+				<a href="https://transitapp.com/" target="_blank" rel="noopener noreferrer">
+					<img src={transitlogo.src} alt="Transit App" class="h-10 w-auto" />
+				</a>
+			</div>
+		</section>
 	</main>
 </Layout>
