@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@fontsource-variable/albert-sans": "^5.2.6",
+    "@fontsource/archivo-black": "^5.2.6",
     "@tabler/icons-react": "^3.33.0",
     "@tailwindcss/vite": "^4.1.8",
     "@types/react": "^19.1.6",

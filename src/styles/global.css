@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Archivo+Black&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Albert Sans", "Segoe UI Variable Display", "Helvetica", "Arial", sans-serif
+    --font: "Albert Sans Variable", "Segoe UI Variable Display", "Helvetica", "Arial", sans-serif;
+
+    --font-serif: var(--font);
+    --font-sans: var(--font);
 
     --color-clipper: #1A5BB4;
     --color-gold: #FEBE30;
