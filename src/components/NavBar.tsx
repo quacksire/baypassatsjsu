@@ -1,37 +1,29 @@
 // components/ui/NavbarBaypass.tsx
 "use client";
 
+import { useEffect, useState } from "react";
+import Logo from "./Logo";
+
 export default function NavbarBaypass() {
+    const THRESH_PX = 50
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        console.log("FAGGOT")
+        window.addEventListener("scroll", () => {setScrolled(window.scrollY > THRESH_PX)});
+    }, [])
+
 
     return (
-        <header className="fixed top-0 left-0 z-10 w-full px-8 py-6 transition-colors duration-300"
-                style={{backgroundColor: 'transparent'}}>
-            <nav className="flex items-center justify-between text-white" id={'nav'}>
-                <div className="text-lg font-semibold whitespace-nowrap">BayPass at SJSU</div>
-                <ul className="flex gap-8 text-sm font-medium">
-                    <li><a href="#" className="hover:underline">Home</a></li>
-                    <li><a href="#" className="hover:underline">Petition</a></li>
-                    <li><a href="/#who" className="hover:underline">About Us</a></li>
+        <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+            <nav className={`navbar  ${scrolled ? 'scrolled' : ''}`} id={'nav'}>
+                <div className="whitespace-nowrap"><Logo/></div>
+                <ul className="flex gap-8 text-md font-black uppercase shade-color-auggold">
+                    <li className="hover:drop-2 transition duration-200"><a href="#">Home</a></li>
+                    <li className="hover:drop-2 transition duration-200"><a href="#">Petition</a></li>
+                    <li className="hover:drop-2 transition duration-200"><a href="/#who">About Us</a></li>
                 </ul>
             </nav>
-            <script>
-                {`
-                window.addEventListener('scroll', () => {
-                    const header = document.querySelector('header');
-                    const nav = document.getElementById('nav');
-                    if (window.scrollY > 0) {
-                        header.style.backgroundColor = 'white';
-                        header.style.color = 'black';
-                        nav.style.color = 'black';
-                        
-                    } else {
-                        header.style.backgroundColor = 'transparent';
-                        header.style.color = 'white';
-                        nav.style.color = 'white';
-                    }
-                });
-                `}
-            </script>
         </header>
     );
 }

@@ -10,12 +10,13 @@ import {IconBrandInstagram, IconBrandBluesky, IconArrowUp, IconMail} from "@tabl
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#0055A2"/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>BayPass at SJSU</title>
 	</head>
 	<body class="bg-white text-black">
-		<NavbarBaypass />
+		<NavbarBaypass client:load/>
 		<slot />
 	</body>
 

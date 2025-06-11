@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Archivo+Black&display=swap');
 @import "tailwindcss";
 
 @theme {
+    --font-sans: "Albert Sans", "Segoe UI Variable Display", "Helvetica", "Arial", sans-serif
+
     --color-clipper: #1A5BB4;
     --color-gold: #FEBE30;
 
@@ -13,5 +16,34 @@
     --color-sjsuadadarkgrey: #666666;
     --color-sjsurolloverblue: #1C88F4;
 
-
+    --color-auggold: #b6660b;
 }
+
+@utility shade-color-* {
+    --mr-shadow-color: --value(--color-*);
+}
+
+@utility drop-* {
+    --mr-val: --value(number)px;
+    transform: translate3d(calc(-0.5 * var(--mr-val)), calc(-0.5 * var(--mr-val)), 0);
+    filter: drop-shadow(var(--mr-val) var(--mr-val) 0 var(--mr-shadow-color));
+}
+
+
+header.navbar {
+    @apply fixed top-0 left-0 z-10 w-full border-transparent px-10 py-6 transition-all duration-200;
+}
+
+header.navbar.scrolled {
+    @apply bg-sjsublue rounded-2xl py-3 px-10 border-sjsugold border-1 shade-color-sjsugold drop-4;
+
+    --margin-size: calc(var(--spacing) * 4);
+
+    margin: var(--margin-size);
+    width: calc(100% - var(--margin-size) * 2);
+}
+
+nav.navbar {
+    @apply flex items-center justify-between text-white;
+}
+
