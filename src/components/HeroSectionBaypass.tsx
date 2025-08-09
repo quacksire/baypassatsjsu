@@ -33,7 +33,7 @@ export default function HeroSectionBaypass() {
 
                     <div className="mt-10">
                         <a
-                            href="#"
+                            href="https://sjsu.qualtrics.com/jfe/form/SV_bDvakzIZSe3K3mm?source=Website"
                             className="inline-block rounded-full bg-sjsublue px-8 py-4 text-sm md:text-base font-extrabold uppercase tracking-wide text-white shade-color-sjsugold active:bg-blue-800 drop-2 hover:drop-6 transition"
                         >
                             Sign the Petition
