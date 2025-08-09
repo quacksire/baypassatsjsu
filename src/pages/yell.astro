@@ -1,97 +1,12 @@
 ---
+import HeroSectionBaypass from "../components/HeroSectionBaypass";
+import EmailYell from "../components/EmailYell.tsx";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main class="w-full px-6 py-16 md:px-12 lg:px-24">
-    <section class="mx-auto max-w-2xl bg-white rounded-xl border-2 border-sjsugold p-6">
-      <h1 class="text-4xl font-black text-sjsublue mb-4">Send the email</h1>
-
-      <ol class="list-decimal ml-6 text-lg text-sjsublue mb-6">
-        <li class="mb-2">Enter your name</li>
-        <li>Press <span class="font-semibold">Send the email</span></li>
-      </ol>
-
-      <form id="yellForm" class="space-y-4">
-        <label for="nameInput" class="block text-lg font-medium text-sjsublue">Your name</label>
-        <input
-          id="nameInput"
-          name="name"
-          type="text"
-          placeholder="e.g., Sam Jeffs"
-          class="w-full rounded-lg border px-4 py-3 text-lg"
-          required
-        />
-
-        <a
-          id="sendEmailLink"
-          href="#"
-          role="button"
-          class="inline-block rounded-lg bg-sjsugold px-5 py-3 font-black uppercase text-sjsublue hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
-        >
-          Send the email
-        </a>
-
-        <p class="text-sm text-clipper">
-          This opens your email app with a pre-filled message to
-          <span class="font-medium">to1@example.com</span> and
-          <span class="font-medium">to2@example.com</span> with
-          <span class="font-medium">example3@example.com</span> BCC’d.
-        </p>
-      </form>
-    </section>
+  <main>
+    <HeroSectionBaypass />
+    <EmailYell client:load />
   </main>
-
-  <script>
-    const form = document.getElementById('yellForm');
-    const nameInput = document.getElementById('nameInput');
-    const link = document.getElementById('sendEmailLink');
-
-    const TO = ['to1@example.com', 'to2@example.com'];
-    const BCC = ['example3@example.com'];
-
-    const SUBJECT = 'Support for Clipper BayPass at SJSU';
-    const makeBody = (name) => 
-`Dear ${name},
-
-I’m writing to share my support for making BayPass available to SJSU students. Unlimited, affordable transit helps students get to class, work, and community events without the cost and stress of driving.
-
-Thank you for your time.
-
-Best,
-${name}`;
-
-    function update() {
-      const name = nameInput.value.trim() || 'there';
-      const body = makeBody(name);
-      const mailto =
-        'mailto:' + TO.join(',') +
-        '?bcc=' + encodeURIComponent(BCC.join(',')) +
-        '&subject=' + encodeURIComponent(SUBJECT) +
-        '&body=' + encodeURIComponent(body);
-
-      link.setAttribute('href', mailto);
-    }
-
-    nameInput.addEventListener('input', update);
-
-    // Let the anchor submit like a button
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      update();
-      link.click();
-    });
-
-    // Allow pressing Enter in the input to send
-    nameInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        update();
-        link.click();
-      }
-    });
-
-    // initialize
-    update();
-  </script>
 </Layout>
