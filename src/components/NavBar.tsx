@@ -9,7 +9,7 @@ export default function NavbarBaypass() {
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
-        console.log("FAGGOT")
+        console.log("scrolled")
         window.addEventListener("scroll", () => {setScrolled(window.scrollY > THRESH_PX)});
     }, [])
 
