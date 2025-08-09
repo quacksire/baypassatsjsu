@@ -20,7 +20,7 @@ export default function NavbarBaypass() {
                 <div className="whitespace-nowrap"><Logo/></div>
                 <ul className="flex gap-8 text-md font-black uppercase shade-color-auggold">
                     <li className="hover:drop-2 transition duration-200"><a href="#">Home</a></li>
-                    <li className="hover:drop-2 transition duration-200"><a href="#">Petition</a></li>
+                    <li className="hover:drop-2 transition duration-200"><a href="https://sjsu.qualtrics.com/jfe/form/SV_bDvakzIZSe3K3mm?source=Website">Petition</a></li>
                     <li className="hover:drop-2 transition duration-200"><a href="/#who">About Us</a></li>
                 </ul>
             </nav>
