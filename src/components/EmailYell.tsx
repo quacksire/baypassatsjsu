@@ -128,7 +128,7 @@ export default function EmailYell({
         <div className="flex items-center gap-4">
           <button
             type="submit"
-            className="inline-block rounded-xl bg-sjsugold px-6 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+            className="cursor-pointer inline-block rounded-xl bg-sjsugold px-6 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
           >
             Send the email
           </button>
