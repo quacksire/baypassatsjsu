@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
+---
+
+<Layout title="thanks for signing" description="here’s what you can do to help out">
+    <main>
+        <!-- Hero -->
+        <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+            <div class="mb-6 w-full text-center mt-10">
+                <h1 class="text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]">thanks for signing</h1>
+                <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-sjsugold">
+                    You just added your name to a growing movement for affordable, unlimited transit at SJSU.
+                </h2>
+            </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto">
+                <div class="mx-auto max-w-4xl mb-10 text-clipper text-lg">
+                    <p>
+                        Real change happens when leadership hears from students directly, sees students show up,
+                        and watches the message spread. Choose a path that fits your time today — every action counts.
+                    </p>
+
+
+                </div>
+                <p class="mx-auto max-w-3xl text-lg text-sjsugold text-center font-bold leading-relaxed mb-5">
+                    here’s what you can do to help out
+
+                </p>
+                <!-- Card grid -->
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Email -->
+                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconMail class="h-8 w-8 text-sjsublue" strokeWidth={2.5} />
+                            <h3 class="text-2xl font-black text-sjsugold">Email</h3>
+                        </div>
+                        <p class="text-clipper">
+                            Use our email tool to contact President Cynthia Teniente-Matson and show support for BayPass.
+                            Each email helps demonstrate that students want affordable and equitable transit now.
+                        </p>
+                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
+                            <li>Pre-filled subject and message</li>
+                            <li>Add your name and send</li>
+                            <li>Two minutes, real impact</li>
+                        </ul>
+                        <a
+                                href="/yell"
+                                class="mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                        >
+                            open email tool
+                        </a>
+                    </div>
+
+                    <!-- Attend a board meeting -->
+                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconCalendarEvent class="h-8 w-8 text-sjsublue" strokeWidth={2.5} />
+                            <h3 class="text-2xl font-black text-sjsugold">Attend a board meeting</h3>
+                        </div>
+                        <p class="text-clipper">
+                            Public comment moves the needle. Share a one-minute statement about how BayPass affects
+                            your commute, budget, and ability to join campus life. We’ll point you to the next dates.
+                        </p>
+                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
+                            <li>Short prep guide and talking points</li>
+                            <li>Show up with other students</li>
+                            <li>Be visible and be heard</li>
+                        </ul>
+                        <a
+                                href="/meetings"
+                                class="mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                        >
+                            see upcoming meetings
+                        </a>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconShare2 class="h-8 w-8 text-sjsublue" strokeWidth={2.5} />
+                            <h3 class="text-2xl font-black text-sjsugold">Share</h3>
+                        </div>
+                        <p class="text-clipper">
+                            Help us spread the petition and survey. Share with classmates, clubs, and group chats.
+                            More signatures and responses make the message to SJSU unmistakable.
+                        </p>
+                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
+                            <li>Ready-to-post text and links</li>
+                            <li>Post to Bluesky or Instagram</li>
+                            <li>Ask two friends to sign today</li>
+                        </ul>
+                        <a
+                                href="/share"
+                                class="mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                        >
+                            get share links
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Closing note -->
+                <p class="mt-10 text-center text-sjsuadadarkgrey">
+                    Thank you for backing BayPass at SJSU. Your action helps classmates get to class, work, and life.
+                </p>
+            </div>
+        </section>
+    </main>
+</Layout>
