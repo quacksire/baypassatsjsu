@@ -1,0 +1,79 @@
+---
+// src/layouts/BayPassMarkdownLayout.astro
+// Stable BayPass-themed Markdown wrapper with a simple hero.
+// Hero supports either an image URL background or a solid color.
+
+import Layout from "../layouts/Layout.astro";
+
+interface HeroCfg {
+    show?: boolean; // default true
+    imageUrl?: string; // e.g. "/assets/hero.jpg"
+    color?: string; // e.g. "#0a2240" or "rgb(10,34,64)"
+    height?: string; // e.g. "18rem", "22rem", "40vh"
+    overlay?: string; // e.g. "rgba(0,0,0,0.35)"
+    align?: "left" | "center"; // text alignment
+    title?: string; // overrides page title in hero if set
+    subtitle?: string; // optional subtitle line
+}
+
+interface Props {
+    title?: string;
+    description?: string;
+    hero?: HeroCfg;
+}
+
+const {
+    title = "",
+    description = "",
+    hero = {}
+} = Astro.props as Props;
+
+const showHero = hero.show ?? true;
+const heroHeight = hero.height ?? "22rem";
+const heroAlign = hero.align ?? "center";
+const hasImage = typeof hero.imageUrl === "string" && hero.imageUrl.length > 0;
+const bgStyle = hasImage
+    ? `background-image:url(${hero.imageUrl});background-size:cover;background-position:center;`
+    : `background-color:${hero.color ?? "#003a70"}`; // sjsublue fallback
+const overlayStyle = `background:${hero.overlay ?? "rgba(0,0,0,0.35)"}`;
+---
+
+<Layout title={title} description={description}>
+    <main>
+        {showHero && (
+                <section class="relative w-full text-white" style={`min-height:${heroHeight}`}>
+                    <div class="absolute inset-0" style={bgStyle}></div>
+                    <div class="absolute inset-0" style={overlayStyle}></div>
+                    <div class={`relative px-6 md:px-12 lg:px-24 h-full flex items-center`}>
+                        <div class={`max-w-6xl mx-auto ${heroAlign === 'center' ? 'text-center' : ''}`}>
+                            <h1 class="text-3xl md:text-5xl font-black drop-shadow-sm">
+                                {hero.title ?? title}
+                            </h1>
+                            { (hero.subtitle || description) && (
+                                    <p class="mt-3 text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
+                                        {hero.subtitle ?? description}
+                                    </p>
+                            )}
+                        </div>
+                    </div>
+                </section>
+        )}
+
+        <section class="w-full bg-white px-6 py-12 md:px-12 lg:px-24">
+            <article
+                    class="prose prose-lg max-w-4xl mx-auto
+               prose-headings:font-black
+               prose-h1:text-sjsurolloverblue
+               prose-h2:text-sjsublue
+               prose-strong:text-sjsublue
+               prose-a:text-sjsurolloverblue hover:prose-a:underline
+               prose-img:rounded-lg prose-img:border-2 prose-img:border-sjsugold
+               prose-hr:border-sjsugold/40 prose-blockquote:border-sjsugold/60"
+            >
+                <slot />
+            </article>
+        </section>
+
+        <section class="w-full bg-sjsublue h-2 shade-color-sjsugold drop-2"></section>
+    </main>
+</Layout>

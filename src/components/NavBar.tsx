@@ -10,9 +10,24 @@ export default function NavbarBaypass() {
 
     useEffect(() => {
         console.log("scrolled")
-        window.addEventListener("scroll", () => {setScrolled(window.scrollY > THRESH_PX)});
-    }, [])
 
+        // if path is in this list, then we should set true by default, without
+        // waiting for scroll event
+        let excludedPaths = [
+            "/yell",
+        ];
+        if (excludedPaths.includes(window.location.pathname)) {
+            setScrolled(true);
+        }
+
+        window.addEventListener("scroll", () => {
+            if (excludedPaths.includes(window.location.pathname)) {
+                setScrolled(true);
+            } else {
+                setScrolled(window.scrollY > THRESH_PX);
+            }
+        })
+    }, []);
 
     return (
         <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
