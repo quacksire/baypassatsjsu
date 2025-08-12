@@ -7,7 +7,7 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
     <main>
         <!-- Hero -->
         <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
-            <div class="mb-6 w-full text-center mt-10">
+            <div class="mb-6 w-full text-center mt-15">
                 <h1 class="text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]">thanks for signing</h1>
                 <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-sjsugold">
                     You just added your name to a growing movement for affordable, unlimited transit at SJSU.
@@ -20,8 +20,8 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
             <div class="max-w-7xl mx-auto">
                 <div class="mx-auto max-w-4xl mb-10 text-clipper text-lg">
                     <p>
-                        Real change happens when leadership hears from students directly, sees students show up,
-                        and watches the message spread. Choose a path that fits your time today — every action counts.
+                        BayPass is a student-led initiative to secure affordable, unlimited transit for all SJSU students.
+                        Your signature is a powerful step toward making this a reality. We still need your help to keep the momentum going.
                     </p>
 
 
@@ -32,10 +32,35 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
                 </p>
                 <!-- Card grid -->
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Share -->
+                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconShare2 class="h-8 w-8 sjsugold" strokeWidth={2.5} />
+                            <h3 class="text-2xl font-black text-sjsugold">Share</h3>
+                        </div>
+                        <p class="text-clipper">
+                            Help us spread the petition and survey. Share with classmates, clubs, and group chats.
+                            More signatures and responses make the message to SJSU unmistakable.
+                        </p>
+                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
+                            <li>Ready-to-post text and links</li>
+                            <li>Post to Bluesky, Instagram, or anywhere</li>
+                            <li>Ask two friends to sign today</li>
+                        </ul>
+                        <!-- we want to pin the button to the bottom of the div -->
+                        <button
+                                id="share"
+                                class="cursor-pointer text-white mt-12 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                        >
+
+                            share on social media
+                        </button>
+                    </div>
+
                     <!-- Email -->
                     <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
                         <div class="flex items-center gap-3 mb-4">
-                            <IconMail class="h-8 w-8 text-sjsublue" strokeWidth={2.5} />
+                            <IconMail class="h-8 w-8 text-sjsugold" strokeWidth={2.5} />
                             <h3 class="text-2xl font-black text-sjsugold">Email</h3>
                         </div>
                         <p class="text-clipper">
@@ -49,7 +74,7 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
                         </ul>
                         <a
                                 href="/yell"
-                                class="mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                                class="text-white mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
                         >
                             open email tool
                         </a>
@@ -58,7 +83,7 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
                     <!-- Attend a board meeting -->
                     <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
                         <div class="flex items-center gap-3 mb-4">
-                            <IconCalendarEvent class="h-8 w-8 text-sjsublue" strokeWidth={2.5} />
+                            <IconCalendarEvent class="h-8 w-8 text-sjsugold" strokeWidth={2.5} />
                             <h3 class="text-2xl font-black text-sjsugold">Attend a board meeting</h3>
                         </div>
                         <p class="text-clipper">
@@ -72,34 +97,13 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
                         </ul>
                         <a
                                 href="/meetings"
-                                class="mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                                class="text-white mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
                         >
                             see upcoming meetings
                         </a>
                     </div>
 
-                    <!-- Share -->
-                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <IconShare2 class="h-8 w-8 text-sjsublue" strokeWidth={2.5} />
-                            <h3 class="text-2xl font-black text-sjsugold">Share</h3>
-                        </div>
-                        <p class="text-clipper">
-                            Help us spread the petition and survey. Share with classmates, clubs, and group chats.
-                            More signatures and responses make the message to SJSU unmistakable.
-                        </p>
-                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
-                            <li>Ready-to-post text and links</li>
-                            <li>Post to Bluesky or Instagram</li>
-                            <li>Ask two friends to sign today</li>
-                        </ul>
-                        <a
-                                href="/share"
-                                class="mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
-                        >
-                            get share links
-                        </a>
-                    </div>
+
                 </div>
 
                 <!-- Closing note -->
@@ -110,3 +114,27 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
         </section>
     </main>
 </Layout>
+
+<script is:inline>
+        const shareButton = document.getElementById("share");
+        if (shareButton) {
+            shareButton.addEventListener("click", () => {
+                const shareText = "I just signed the BayPass petition for affordable transit at SJSU! Join me in making a difference: https://baypassatsjsu.com";
+                const shareUrl = "https://baypassatsjsu.com";
+
+
+                // check if Web share AND is mobile
+
+                if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    navigator.share({
+                        title: "BayPass at SJSU",
+                        text: shareText,
+                        url: shareUrl
+                    }).catch(console.error);
+                } else {
+                    // Fallback for browsers that don't support the Web Share API
+                    window.open(`https://bsky.app/intent/compose?text=${encodeURIComponent(shareText.replace(": https://baypassatsjsu.com", ""))}&url=${encodeURIComponent(shareUrl)}`, "_blank");
+                }
+            });
+        }
+</script>

@@ -12,6 +12,12 @@ export default defineConfig({
   integrations: [react(), mdx()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      allowedHosts: [
+          '4321.outbound.quacksire.dev',
+          'localhost'
+      ]
+    }
   }
 });

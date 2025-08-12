@@ -84,14 +84,14 @@ export default function EmailYell({
     <section
       style={{margin: '24px'}} className={`max-w-xl rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 ${className}`}
     >
-      <h1 className="text-5xl font-black text-sjsurolloverblue mb-6">{heading}</h1>
+      <h1 className="text-5xl font-black text-sjsublue mb-6">{heading}</h1>
       <h2>
         We made a simple tool that emails Cynthia Teniente-Matson showing your support for BayPass.
         Every email will help us to demonstrate that students want affordable and equitable transit now!
       </h2>
 
       {/* Steps */}
-      <h3 className="text-3xl font-black text-sjsurolloverblue mb-6">Instructions</h3>
+      <h3 className="text-3xl font-black text-sjsublue mb-6 mt-3">Instructions</h3>
       <ol className="space-y-3 mb-8 list-none">
         <li className="flex items-center gap-3">
           <StepIcon n={1} />
@@ -128,7 +128,7 @@ export default function EmailYell({
         <div className="flex items-center gap-4">
           <button
             type="submit"
-            className="cursor-pointer inline-block rounded-xl bg-sjsugold px-6 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+            className="cursor-pointer inline-block rounded-xl bg-sjsugold px-6 py-3 font-black uppercase tracking-wide text-white shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
           >
             Send the email
           </button>
