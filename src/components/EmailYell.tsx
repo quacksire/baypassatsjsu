@@ -12,13 +12,21 @@ export interface EmailYellProps {
   bodyTemplate?: (name: string) => string;
 }
 
-const defaultBody = (name: string) => `Hello, my name is ${name}.
+const defaultBody = (name: string) => `Hi Dr. Teniente-Matson,
 
-I’m writing to support making the Clipper BayPass available to SJSU students. Unlimited, affordable transit helps students get to class, work, and activities across the Bay Area.
+My name is ${name}, and I’m a student at San José State. I’m writing because I want SJSU to adopt the Clipper BayPass for students.
 
-Thanks for your consideration.
+Right now, a lot of us are struggling with the cost of getting to campus. Some students spend over $2,000 each semester just on transit fares, while those who drive have to compete for only 7,500 parking spots even though more than 20,000 people come to campus daily. It doesn’t add up, and it makes it harder to focus on school.
 
-Best,
+BayPass would fix that. During the two-year pilot program, SJSU students with BayPass took 71.5% more trips and made over six times more transfers across transit systems. Surveys also show 61% of students already spend more than BayPass would cost each month. For just $25 a semester, we’d finally have unlimited access to BART, Caltrain, buses, and ferries — and a real chance to get around the Bay Area without breaking the bank.
+
+You can see the full report and details at https://baypassatsjsu.com. The numbers make it clear: BayPass works, and students want it.
+
+I hope you’ll consider moving BayPass forward as a student fee option so we can make SJSU more accessible for everyone.
+
+Thank you for your time.
+
+Sincerely,
 ${name}`;
 
 function StepIcon({ n, size = 32, className = "" }: { n: number; size?: number; className?: string }) {
