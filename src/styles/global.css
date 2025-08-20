@@ -1,23 +1,18 @@
 @import "tailwindcss";
-
+@import "tw-animate-css";
 @theme {
     --font: "Albert Sans Variable", "Segoe UI Variable Display", "Helvetica", "Arial", sans-serif;
-
     --font-serif: var(--font);
     --font-sans: var(--font);
-
     --color-clipper: #1A5BB4;
     --color-gold: #FEBE30;
-
     --color-sjsublue: #0055A2;
     --color-sjsugold: #E5A823;
     --color-sjsugrey: #939597;
     --color-sjsudarkgrey: #53565A;
-
     --color-sjsuadalightgrey: #D2D2D2;
     --color-sjsuadadarkgrey: #666666;
     --color-sjsurolloverblue: #1C88F4;
-
     --color-auggold: #b6660b;
 }
 
@@ -31,16 +26,13 @@
     filter: drop-shadow(var(--mr-val) var(--mr-val) 0 var(--mr-shadow-color));
 }
 
-
 header.navbar {
     @apply fixed top-0 left-0 z-10 w-full border-transparent px-10 py-6 transition-all duration-200;
 }
 
 header.navbar.scrolled {
     @apply bg-sjsublue rounded-2xl py-3 px-10 border-sjsugold border-1 shade-color-sjsugold drop-4;
-
     --margin-size: calc(var(--spacing) * 4);
-
     margin: var(--margin-size);
     width: calc(100% - var(--margin-size) * 2);
 }
@@ -49,3 +41,19 @@ nav.navbar {
     @apply flex items-center justify-between text-white;
 }
 
+@layer base {
+     :root {
+        --chart-1: -;
+        --chart-2: oklch(0.6 0.118 184.704);
+        --chart-3: oklch(0.398 0.07 227.392);
+        --chart-4: oklch(0.828 0.189 84.429);
+        --chart-5: oklch(0.769 0.188 70.08);
+    }
+    .dark {
+        --chart-1: oklch(0.488 0.243 264.376);
+        --chart-2: oklch(0.696 0.17 162.48);
+        --chart-3: oklch(0.769 0.188 70.08);
+        --chart-4: oklch(0.627 0.265 303.9);
+        --chart-5: oklch(0.645 0.246 16.439);
+    }
+}

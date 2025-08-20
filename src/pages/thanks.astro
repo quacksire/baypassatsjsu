@@ -3,129 +3,210 @@ import Layout from "../layouts/Layout.astro";
 import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
 ---
 
-<Layout title="thanks for signing" description="here’s what you can do to help out">
-    <main>
-        <!-- Hero -->
-        <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
-            <div class="mb-6 w-full text-center mt-15">
-                <h1 class="text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]">thanks for signing</h1>
-                <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-sjsugold">
-                    You just added your name to a growing movement for affordable, unlimited transit at SJSU.
-                </h2>
-            </div>
-        </section>
+<Layout
+	title='thanks for signing'
+	description='here’s what you can do to help out'
+>
+	<main>
+		<!-- Hero -->
+		<section class='w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24'>
+			<div class='mb-6 w-full text-center mt-15'>
+				<h1
+					class='text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]'
+				>
+					thanks for signing
+				</h1>
+				<h2
+					class='mt-2 text-2xl md:text-3xl font-semibold text-sjsugold'
+				>
+					You just added your name to a growing movement for
+					affordable, unlimited transit at SJSU.
+				</h2>
+			</div>
+		</section>
 
-        <!-- Actions -->
-        <section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
-            <div class="max-w-7xl mx-auto">
-                <div class="mx-auto max-w-4xl mb-10 text-clipper text-lg">
-                    <p>
-                        BayPass is a student-led initiative to secure affordable, unlimited transit for all SJSU students.
-                        Your signature is a powerful step toward making this a reality. We still need your help to keep the momentum going.
-                    </p>
+		<!-- Actions -->
+		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
+			<div class='max-w-7xl mx-auto'>
+				<div class='mx-auto max-w-5xl mb-10 text-clipper text-lg'>
+					<p>
+						Your signature is a powerful step toward making this a
+						reality. We still need your help to keep the momentum
+						going.
+					</p>
+				</div>
+				<p
+					class='mx-auto max-w-3xl text-lg text-sjsugold text-center font-bold leading-relaxed mb-5'
+				>
+					Here's what you can do to help out!
+				</p>
+				<!-- Card grid -->
+				<div class='grid grid-cols-1 gap-8 md:grid-cols-3'>
+					<!-- Share -->
+					<div
+						class='rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col'
+					>
+						<div class='flex items-center gap-3 mb-4'>
+							<IconShare2
+								className='h-8 w-8 text-sjsugold'
+								strokeWidth={2.5}
+							/>
+							<h3 class='text-2xl font-black text-sjsugold'>
+								Share
+							</h3>
+						</div>
+						<p class='text-clipper'>
+							Help us spread the petition and survey. Share with
+							classmates, clubs, and group chats. More signatures
+							and responses make the message to SJSU unmistakable.
+						</p>
+						<ul class='mt-4 list-disc pl-5 text-clipper space-y-1'>
+							<li>Ready-to-post text and links</li>
+							<li>Post to Bluesky, Instagram, or anywhere</li>
+							<li>Ask two friends to sign today</li>
+						</ul>
+						<!-- we want to pin the button to the bottom of the div -->
+						<button
+							id='share'
+							class='cursor-pointer text-white mt-12 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40'
+						>
+							share on social media
+						</button>
+					</div>
 
+					<!-- Email -->
+					<div
+						class='rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col'
+					>
+						<div class='flex items-center gap-3 mb-4'>
+							<IconMail
+								className='h-8 w-8 text-sjsugold'
+								strokeWidth={2.5}
+							/>
+							<h3 class='text-2xl font-black text-sjsugold'>
+								Email
+							</h3>
+						</div>
+						<p class='text-clipper'>
+							Use our email tool to contact President Cynthia
+							Teniente-Matson and show support for BayPass. Each
+							email helps demonstrate that students want
+							affordable and equitable transit now.
+						</p>
+						<ul class='mt-4 list-disc pl-5 text-clipper space-y-1'>
+							<li>Pre-filled subject and message</li>
+							<li>Add your name and send</li>
+							<li>Two minutes, real impact</li>
+						</ul>
+						<a
+							href='/yell'
+							class='text-white mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40'
+						>
+							open email tool
+						</a>
+					</div>
 
-                </div>
-                <p class="mx-auto max-w-3xl text-lg text-sjsugold text-center font-bold leading-relaxed mb-5">
-                    here’s what you can do to help out
+					<!-- Attend a board meeting -->
+					<div
+						class='rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col'
+					>
+						<div class='flex items-center gap-3 mb-4'>
+							<IconCalendarEvent
+								className='h-8 w-8 text-sjsugold'
+								strokeWidth={2.5}
+							/>
+							<h3 class='text-2xl font-black text-sjsugold'>
+								Attend a board meeting
+							</h3>
+						</div>
+						<p class='text-clipper'>
+							Public comment moves the needle. Share a one-minute
+							statement about how BayPass affects your commute,
+							budget, and ability to join campus life. We’ll point
+							you to the next dates.
+						</p>
+						<ul class='mt-4 list-disc pl-5 text-clipper space-y-1'>
+							<li>Short prep guide and talking points</li>
+							<li>Show up with other students</li>
+							<li>Be visible and be heard</li>
+						</ul>
+						<a
+							href='/meetings'
+							class='text-white mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40'
+						>
+							see upcoming meetings
+						</a>
+					</div>
+				</div>
+			</div>
+			<div
+				class='mt-10 mx-auto max-w-2xl rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col'
+			>
+				<div class='flex items-center gap-3 mb-4'>
+					<IconMail
+						className='h-8 w-8 text-sjsugold'
+						strokeWidth={2.5}
+					/>
+					<h3 class='text-2xl font-black text-sjsugold'>
+						Keep Connected to the Cause
+					</h3>
+				</div>
+				<p class='text-clipper text-lg'>
+					Stay in the loop with updates, meetings, and action
+					opportunities. You can follow or reach out to us through:
+				</p>
 
-                </p>
-                <!-- Card grid -->
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <!-- Share -->
-                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <IconShare2 class="h-8 w-8 sjsugold" strokeWidth={2.5} />
-                            <h3 class="text-2xl font-black text-sjsugold">Share</h3>
-                        </div>
-                        <p class="text-clipper">
-                            Help us spread the petition and survey. Share with classmates, clubs, and group chats.
-                            More signatures and responses make the message to SJSU unmistakable.
-                        </p>
-                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
-                            <li>Ready-to-post text and links</li>
-                            <li>Post to Bluesky, Instagram, or anywhere</li>
-                            <li>Ask two friends to sign today</li>
-                        </ul>
-                        <!-- we want to pin the button to the bottom of the div -->
-                        <button
-                                id="share"
-                                class="cursor-pointer text-white mt-12 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
-                        >
+				<ul class='mt-4 list-disc pl-5 text-clipper space-y-1'>
+					<div class='mt-8 flex flex-col gap-4'>
+						<a
+							href='https://bsky.app/profile/baypassatsjsu.com'
+							target='_blank'
+							rel='noopener noreferrer'
+							class='text-white inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md text-center transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40'
+						>
+							Our Bluesky updates and advocacy news
+						</a>
+						<a
+							href='https://instagram.com/baypassatsjsu'
+							target='_blank'
+							rel='noopener noreferrer'
+							class='text-white inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md text-center transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40'
+						>
+							Our Instagram stories and campaign drops
+						</a>
+						<a
+							href='mailto:hi@baypassatsjsu.com'
+							class='text-white inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md text-center transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40'
+						>
+							Email us to collaborate or get involved
+						</a>
+					</div>
+				</ul>
 
-                            share on social media
-                        </button>
-                    </div>
+				<!-- Closing note -->
+				<p class='mt-10 text-center text-sjsuadadarkgrey'>
+					Thank you for backing BayPass at SJSU. Your action helps
+					classmates get to class, work, and life.
+				</p>
+			</div>
+		</section>
+	</main>
 
-                    <!-- Email -->
-                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <IconMail class="h-8 w-8 text-sjsugold" strokeWidth={2.5} />
-                            <h3 class="text-2xl font-black text-sjsugold">Email</h3>
-                        </div>
-                        <p class="text-clipper">
-                            Use our email tool to contact President Cynthia Teniente-Matson and show support for BayPass.
-                            Each email helps demonstrate that students want affordable and equitable transit now.
-                        </p>
-                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
-                            <li>Pre-filled subject and message</li>
-                            <li>Add your name and send</li>
-                            <li>Two minutes, real impact</li>
-                        </ul>
-                        <a
-                                href="/yell"
-                                class="text-white mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
-                        >
-                            open email tool
-                        </a>
-                    </div>
+	<script is:inline>
+		const shareButton = document.getElementById("share");
+		if (shareButton) {
+			shareButton.addEventListener("click", () => {
+				const shareText =
+					"I just signed the BayPass petition for affordable transit at SJSU! Join me in making a difference: https://baypassatsjsu.com";
+				const shareUrl = "https://baypassatsjsu.com";
 
-                    <!-- Attend a board meeting -->
-                    <div class="rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <IconCalendarEvent class="h-8 w-8 text-sjsugold" strokeWidth={2.5} />
-                            <h3 class="text-2xl font-black text-sjsugold">Attend a board meeting</h3>
-                        </div>
-                        <p class="text-clipper">
-                            Public comment moves the needle. Share a one-minute statement about how BayPass affects
-                            your commute, budget, and ability to join campus life. We’ll point you to the next dates.
-                        </p>
-                        <ul class="mt-4 list-disc pl-5 text-clipper space-y-1">
-                            <li>Short prep guide and talking points</li>
-                            <li>Show up with other students</li>
-                            <li>Be visible and be heard</li>
-                        </ul>
-                        <a
-                                href="/meetings"
-                                class="text-white mt-6 inline-block rounded-xl bg-sjsugold px-5 py-3 font-black uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
-                        >
-                            see upcoming meetings
-                        </a>
-                    </div>
-
-
-                </div>
-
-                <!-- Closing note -->
-                <p class="mt-10 text-center text-sjsuadadarkgrey">
-                    Thank you for backing BayPass at SJSU. Your action helps classmates get to class, work, and life.
-                </p>
-            </div>
-        </section>
-    </main>
+				// check if Web share and use it
+				navigator
+					.share({
+						text: shareText,
+					})
+					.catch(console.error);
+			});
+		}
+	</script>
 </Layout>
-
-<script is:inline>
-        const shareButton = document.getElementById("share");
-        if (shareButton) {
-            shareButton.addEventListener("click", () => {
-                const shareText = "I just signed the BayPass petition for affordable transit at SJSU! Join me in making a difference: https://baypassatsjsu.com";
-                const shareUrl = "https://baypassatsjsu.com";
-
-                // check if Web share and use it
-                navigator.share({
-                    text: shareText,
-                }).catch(console.error);
-            });
-        }
-</script>
