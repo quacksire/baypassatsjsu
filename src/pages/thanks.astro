@@ -122,19 +122,10 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
                 const shareText = "I just signed the BayPass petition for affordable transit at SJSU! Join me in making a difference: https://baypassatsjsu.com";
                 const shareUrl = "https://baypassatsjsu.com";
 
-
-                // check if Web share AND is mobile
-
-                if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                    navigator.share({
-                        title: "BayPass at SJSU",
-                        text: shareText,
-                        url: shareUrl
-                    }).catch(console.error);
-                } else {
-                    // Fallback for browsers that don't support the Web Share API
-                    window.open(`https://bsky.app/intent/compose?text=${encodeURIComponent(shareText.replace(": https://baypassatsjsu.com", ""))}&url=${encodeURIComponent(shareUrl)}`, "_blank");
-                }
+                // check if Web share and use it
+                navigator.share({
+                    text: shareText,
+                }).catch(console.error);
             });
         }
 </script>
