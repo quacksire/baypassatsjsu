@@ -41,7 +41,7 @@ export default function ParkingChart() {
                                     textAnchor="middle"
                                     dy=".35em"
                                     fill="white"
-                                    fontSize="24"
+                                    fontSize="16"
                                     fontWeight="bold"
                                 >
                                     Parking Spots

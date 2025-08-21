@@ -101,99 +101,100 @@ export default function EmailYell({
     };
 
     return (
-        <section
-            style={{ margin: "24px" }}
-            className={`max-w-xl rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 ${className}`}
-        >
-            <h1 className="text-5xl font-black text-sjsublue mb-6">
-                {heading}
-            </h1>
-            <h2>
-                We made a simple tool that emails Cynthia Teniente-Matson
-                showing your support for BayPass. Every email will help us to
-                demonstrate that students want affordable and equitable transit
-                now!
-            </h2>
+        <div className="min-w-100 md:flex md:flex-col md:items-center">
+            <section
+                className={`max-w-xl rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 ${className}`}
+            >
+                <h1 className="text-5xl emph-m emph-bb mb-6">
+                    {heading}
+                </h1>
+                <h2>
+                    We made a simple tool that emails Cynthia Teniente-Matson
+                    showing your support for BayPass. Every email will help us to
+                    demonstrate that students want affordable and equitable transit
+                    now!
+                </h2>
 
-            {/* Steps */}
-            <h3 className="text-3xl font-black text-sjsublue mb-6 mt-3">
-                Instructions
-            </h3>
-            <ol className="space-y-3 mb-8 list-none">
-                <li className="flex items-center gap-3">
-                    <StepIcon n={1} />
-                    <span className="text-lg text-sjsublue">
-                        Enter your name
-                    </span>
-                </li>
-                <br />
-                <li className="flex items-center gap-3">
-                    <StepIcon n={2} />
-                    <span className="text-lg text-sjsublue">
-                        Press{" "}
-                        <span className="font-semibold">Send the email</span>
-                    </span>
-                </li>
-            </ol>
-
-            {/* Form */}
-            <form className="space-y-5" onSubmit={onSubmit}>
-                <div>
-                    <label
-                        htmlFor={inputId}
-                        className="block text-lg font-semibold text-sjsublue"
-                    >
-                        Your name
-                    </label>
-                    <input
-                        id={inputId}
-                        name="name"
-                        type="text"
-                        placeholder={placeholder}
-                        className="mt-2 w-full rounded-xl border-2 border-sjsublue/20 px-4 py-3 text-lg text-sjsublue placeholder:text-clipper focus:border-sjsublue focus:outline-none focus:ring-4 focus:ring-sjsublue/20"
-                        aria-describedby={helpId}
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                </div>
-
-                <div className="flex items-center gap-4">
-                    <button
-                        type="submit"
-                        className="button inline-block rounded-xl px-6 py-3 font-black uppercase tracking-wide"
-                    >
-                        Send the email
-                    </button>
-                    <span className="text-sm text-clipper" aria-live="polite">
-                        Subject: {subject}
-                    </span>
-                </div>
-
-                <p id={helpId} className="text-xs text-clipper">
-                    This opens your email app with a pre‑filled message to{" "}
-                    <span className="font-medium">{to.join(" and ")}</span>
-                    {bcc?.length
-                        ? (
-                            <>
-                                {" "}with{" "}
-                                <span className="font-medium">
-                                    {bcc.join(", ")}
-                                </span>{" "}
-                                BCC’d.
-                            </>
-                        )
-                        : (
-                            "."
-                        )}
+                {/* Steps */}
+                <h3 className="text-3xl font-black text-sjsublue mb-6 mt-3">
+                    Instructions
+                </h3>
+                <ol className="space-y-3 mb-8 list-none">
+                    <li className="flex items-center gap-3">
+                        <StepIcon n={1} />
+                        <span className="text-lg text-sjsublue">
+                            Enter your name
+                        </span>
+                    </li>
                     <br />
-                    {`By sending the email, you agree to let us use your email
-                    address and message content to track sent emails and send
-                    you updates on the campaign. Your email won't be shared with
-                    anyone, and you may opt-out by removing the BCC. Thanks!`}
-                </p>
-            </form>
-        </section>
+                    <li className="flex items-center gap-3">
+                        <StepIcon n={2} />
+                        <span className="text-lg text-sjsublue">
+                            Press{" "}
+                            <span className="font-semibold">Send the email</span>
+                        </span>
+                    </li>
+                </ol>
+
+                {/* Form */}
+                <form className="space-y-5" onSubmit={onSubmit}>
+                    <div>
+                        <label
+                            htmlFor={inputId}
+                            className="block text-lg font-semibold text-sjsublue"
+                        >
+                            Your name
+                        </label>
+                        <input
+                            id={inputId}
+                            name="name"
+                            type="text"
+                            placeholder={placeholder}
+                            className="mt-2 w-full rounded-xl border-2 border-sjsublue/20 px-4 py-3 text-lg text-sjsublue placeholder:text-clipper focus:border-sjsublue focus:outline-none focus:ring-4 focus:ring-sjsublue/20"
+                            aria-describedby={helpId}
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                        <button
+                            type="submit"
+                            className="button inline-block rounded-xl px-6 py-3 font-black uppercase tracking-wide"
+                        >
+                            Send the email
+                        </button>
+                        <span className="text-sm text-clipper" aria-live="polite">
+                            Subject: {subject}
+                        </span>
+                    </div>
+
+                    <p id={helpId} className="text-xs text-clipper">
+                        This opens your email app with a pre‑filled message to{" "}
+                        <span className="font-medium">{to.join(" and ")}</span>
+                        {bcc?.length
+                            ? (
+                                <>
+                                    {" "}with{" "}
+                                    <span className="font-medium">
+                                        {bcc.join(", ")}
+                                    </span>{" "}
+                                    BCC’d.
+                                </>
+                            )
+                            : (
+                                "."
+                            )}
+                        <br />
+                        {`By sending the email, you agree to let us use your email
+                        address and message content to track sent emails and send
+                        you updates on the campaign. Your email won't be shared with
+                        anyone, and you may opt-out by removing the BCC. Thanks!`}
+                    </p>
+                </form>
+            </section>
+        </div>
     );
 }
 

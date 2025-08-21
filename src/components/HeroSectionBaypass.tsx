@@ -5,7 +5,7 @@ import diridon from '../assets/diridon.jpg';
 
 export default function HeroSectionBaypass() {
     return (
-        <section className="relative min-h-[calc(100vh)] w-full">
+        <section className="relative min-h-[calc(100vh)] w-full !p-0">
             {/* Background Image */}
             <img
                 src={diridon.src}
@@ -19,14 +19,14 @@ export default function HeroSectionBaypass() {
             {/* Hero Content */}
             <div className="flex h-screen items-center px-8 md:px-16 lg:px-32">
                 <div className="max-w-4xl text-white">
-                    <p className="text-4xl md:text-5xl font-bold mb-2">
-                    <span className="underline decoration-sjsugold decoration-4 underline-offset-4">
+                    <p className="text-2xl sm:text-4xl md:text-5xl font-bold mb-2">
+                    <span className="underline decoration-sjsugold decoration-2 md:decoration-4 underline-offset-4">
                       Spartans
                     </span>{" "}
                         deserve
                     </p>
 
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-tight text-sjsugold shade-color-auggold drop-3">
+                    <h1 className="emph-s sm:emph-m md:emph-l emph-gg">
                         Affordable and<br/>
                         Equitable Transit.
                     </h1>
@@ -40,7 +40,7 @@ export default function HeroSectionBaypass() {
                         </a>
                         <a
                             href="/thanks"
-                            className="ml-4 mt-20 pt-10 text-sm font-extrabold text-sjsugold hover:underline"
+                            className="ml-4 mt-4 md:mt-20 md:pt-10 block md:inline font-extrabold text-sm text-sjsugold hover:text-augblue active:text-sjsublue transition"
                         >
                             Already signed? &gt;
                         </a>

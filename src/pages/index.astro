@@ -27,7 +27,6 @@ import ParkingChart from "../components/ParkingChart";
 import ImpactComparisonChart from "../components/ImpactComparisonChart";
 import BaypassMapSection from "../components/BaypassMapSection.astro";
 import StatCard from "../components/StatCard";
-import Separator from "../components/Separator.astro";
 ---
 
 <Layout>
@@ -37,7 +36,7 @@ import Separator from "../components/Separator.astro";
 		<section class='bg-sjsublue'>
 			<div class='sect-title'>
 				<h2 class='text-4xl font-black text-white'>SJSU has a</h2>
-				<h3 class='emph-2l emph-gg decoration-4 underline underline-offset-8'>
+				<h3 class='emph-2l emph-gg decoration-4 underline underline-offset-8 pt-4 pb-8'>
 					Car Problem
 				</h3>
 			</div>
@@ -188,12 +187,10 @@ import Separator from "../components/Separator.astro";
 			</div>
 		</section>
 
-		<Separator/>
-
-		<section class='bg-sjsublue'>
+		<section class='bg-gold'>
 			<!-- Section Title -->
 			<h2
-				class='sect-title emph-l emph-gg pb-8'
+				class='sect-title emph-l emph-wg pb-8'
 			>
 				Baypass <span class="emph-wg">Works</span>
 				
@@ -223,17 +220,15 @@ import Separator from "../components/Separator.astro";
 				
 			</div>
 
-			<p class='text-center text-md mt-8 text-sjsuadalightgrey uppercase'>
+			<p class='text-center text-md mt-8 text-sjsuadadarkgrey uppercase'>
 					(Note: Statistics are from the 2 year pilot program
 					which ended May 2024. See the full report <a
 						href='https://ducks.win/MTCBayPassPhase1Final'
 						target='_blank'
-						class='text-sjsugold'>here</a
+						class='text-auggold'>here</a
 					>.)
 				</p>
 		</section>
-
-		<Separator/>
 
 		<TimelineBaypass />
 
