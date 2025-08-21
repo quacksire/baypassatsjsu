@@ -25,6 +25,7 @@ import transbaylogo from "../assets/supporters/transbay.png";
 import transitlogo from "../assets/supporters/transit.png";
 import ParkingChart from "../components/ParkingChart";
 import ImpactComparisonChart from "../components/ImpactComparisonChart";
+import BaypassMapSection from "../components/BaypassMapSection.astro";
 ---
 
 <Layout>
@@ -105,7 +106,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
 			<!-- Heading -->
 			<h2
-				class='text-center text-5xl font-black uppercase text-sjsublue shade-color-sjsublue drop-3 mb-12'
+				class='text-center text-5xl font-black uppercase text-sjsublue mb-12'
 			>
 				The Solution?
 			</h2>
@@ -164,14 +165,16 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 			</div>
 		</section>
 
+		<BaypassMapSection />
+
 		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
 			<!-- Section Title -->
 			<h2
-				class='text-center text-6xl mt-2 md:text-7xl font-black mb-10 text-sjsugold drop-4'
+				class='text-center text-6xl mt-2 md:text-7xl font-black mb-10 text-sjsugold'
 			>
 				There's already results
 				<!-- add a note saying during "the pilot program" and link the pdf -->
-				<p class='mt-2 text-lg text-clipper drop-0'>
+				<p class='mt-2 text-lg text-sjsublue drop-0'>
 					(Note: These statistics are from the 2 year pilot program
 					which ended May 2024. See the full report <a
 						href='https://ducks.win/MTCBayPassPhase1Final'
@@ -183,10 +186,10 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 
 			<!-- Statistics Cards Container -->
 			<div
-				class='max-w-7xl mx-auto flex flex-wrap justify-center gap-8 shade-color-auggold drop-6'
+				class='max-w-7xl mx-auto flex flex-wrap justify-center gap-8 shade-color-auggold drop-6 '
 			>
 				<!-- Card 1 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -199,7 +202,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 				</div>
 
 				<!-- Card 2 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -212,7 +215,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 				</div>
 
 				<!-- Card 3 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -225,7 +228,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 				</div>
 
 				<!-- Card 4 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-7xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -252,7 +255,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 				class='max-w-7xl mx-auto flex flex-wrap justify-center gap-8 shade-color-auggold drop-6'
 			>
 				<!-- Card 1 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -265,7 +268,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 				</div>
 
 				<!-- Card 2 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -279,7 +282,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 				</div>
 
 				<!-- Card 3 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg'>
+				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
 					<h3
 						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
 						style='letter-spacing: -5px'
@@ -299,7 +302,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24' id='who'>
 			<!-- Section Title -->
 			<h2
-				class='text-center text-6xl font-black text-sjsublue shade-color-sjsublue drop-3 mb-12 uppercase'
+				class='text-center text-6xl font-black text-sjsublue mb-12 uppercase'
 			>
 				Who we are
 			</h2>
@@ -402,7 +405,7 @@ import ImpactComparisonChart from "../components/ImpactComparisonChart";
 		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
 			<!-- Section Title (white text with thick yellow drop shadow) -->
 			<h2
-				class='text-center text-6xl font-black text-sjsugold shade-color-auggold drop-3 mb-12'
+				class='text-center text-6xl font-black text-sjsugold mb-12'
 			>
 				Our supporters
 			</h2>

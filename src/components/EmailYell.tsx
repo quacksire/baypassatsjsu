@@ -79,13 +79,11 @@ export default function EmailYell({
         const displayName = name.trim() || "a student";
         const body = bodyTemplate(displayName);
 
-        const params = new URLSearchParams();
-        if (bcc?.length) params.set("bcc", bcc.join(","));
-        params.set("subject", subject);
-        params.set("body", body);
-        const qs = params.toString();
+        const mailto = `mailto:${to.join(",")}${bcc ? `?bcc=${bcc.join(",")}` : ""}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-        return `mailto:${to.join(",")}${qs ? `?${qs}` : ""}`;
+        console.log("Generated mailto query string:", mailto);
+
+        return mailto;
     }, [name, to, bcc, subject, bodyTemplate]);
 
     const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {

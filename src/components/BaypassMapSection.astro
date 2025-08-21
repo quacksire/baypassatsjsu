@@ -1,0 +1,108 @@
+---
+const cityCosts = {
+    "Castro Valley": 2160.00,
+    "Fremont": 1116.00,
+    "Berkeley": 1696.00,
+    "Walnut Creek": 1908.00,
+    "Santa Rosa": 4688.00,
+    "San Francisco": 2208.00,
+    "Mountain View": 1032.00,
+    "Gilroy": 1392.00,
+    "Daly City": 1752.00,
+};
+
+import baypassmap from '../assets/baypass-map.png';
+---
+
+<section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
+    <!-- Heading -->
+    <h2 class="text-center text-6xl mt-2 md:text-7xl font-black mb-10 text-sjsublue" id="calculate">
+        How much are students spending to get to campus?
+    </h2>
+
+    <!-- Layout -->
+    <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between max-w-7xl mx-auto">
+        <!-- Left: Image -->
+        <div class="md:w-1/2 flex justify-center">
+            <img
+                    src={baypassmap.src}
+                    alt="Map showing BayPass coverage"
+                    class="w-full max-w-md rounded-lg border-4 border-sjsugold object-cover shade-color-sjsugold drop-8"
+            />
+        </div>
+
+        <!-- Right: Calculator -->
+        <div class="md:w-1/2 text-lg text-black space-y-6">
+            <p>
+                Students commuting from across the Bay Area often spend hundreds, sometimes thousands, just to get to class.
+                That burden falls hardest on the <strong class="text-sjsublue font-extrabold">38% of SJSU students who commute from outside Santa Clara County</strong>.
+            </p>
+
+            <p>
+                Select a city to see what those students pay today, and how much BayPass could save them.
+            </p>
+
+            <div class="bg-neutral-100 rounded-xl p-6 shadow-md">
+                <label for="commuteSelector" class="block font-bold text-sjsublue mb-2">
+                    Choose a city:
+                </label>
+
+                <select
+                        id="commuteSelector"
+                        class="w-full rounded-md border border-neutral-300 px-4 py-2 bg-white text-black focus:ring-sjsugold focus:outline-none"
+                >
+                    <option value="" disabled selected>Select a city</option>
+                    {Object.keys(cityCosts).map(city => (
+                            <option value={city}>{city}</option>
+                    ))}
+                </select>
+
+                <div id="commuteResult" class="mt-6 space-y-2 hidden">
+                    <p class="text-lg">
+                        The average cost for a student commuting from <span id="cityLabel" class="font-bold text-black"></span> via public transit is
+                        <span class="font-bold text-red-600" id="costText">$0.00</span> per semester.
+                    </p>
+                    <p class="text-xs">
+                        (SJSU's average tuition is around $4,500 per semester)
+                    </p>
+                    <p class="text-lg">
+                        With <strong class="text-sjsublue">BayPass</strong>, they would only pay <span class="font-bold text-green-600">$50</span>.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:script>
+    const costs = {
+        "Castro Valley": 2160.00,
+        "Fremont": 1116.00,
+        "Berkeley": 1696.00,
+        "Walnut Creek": 1908.00,
+        "Santa Rosa": 4688.00,
+        "San Francisco": 2208.00,
+        "Mountain View": 1032.00,
+        "Gilroy": 1392.00,
+        "Daly City": 1752.00,
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const selector = document.getElementById('commuteSelector');
+        const costText = document.getElementById('costText');
+        const cityLabel = document.getElementById('cityLabel');
+        const display = document.getElementById('commuteResult');
+
+        selector.addEventListener('change', () => {
+            const city = selector.value;
+            if (costs[city]) {
+                costText.textContent = `$${costs[city].toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                })}`;
+                cityLabel.textContent = city;
+                display.classList.remove('hidden');
+            }
+        });
+    });
+</script>

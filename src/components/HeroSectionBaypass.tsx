@@ -38,7 +38,14 @@ export default function HeroSectionBaypass() {
                         >
                             Sign the Petition
                         </a>
+                        <a
+                            href="/thanks"
+                            className="ml-4 mt-20 pt-10 text-sm font-extrabold text-sjsugold hover:underline"
+                        >
+                            Already signed? &gt;
+                        </a>
                     </div>
+
                 </div>
             </div>
 

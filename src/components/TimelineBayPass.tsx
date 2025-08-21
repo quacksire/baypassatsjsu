@@ -28,7 +28,14 @@ export default function TimelineBaypass() {
             content: (
                 <p>
                     We’re continuing to organize for equitable transit access at SJSU and beyond.
-                    Stay tuned.
+                    <br />
+                    {/** add a "come help us out" that goes to /thanks */}
+                    <a
+                        href="/thanks"
+                        className="text-sjsugold font-semibold"
+                    >
+                        Join us in our efforts to bring BayPass back!
+                    </a>
                 </p>
             ),
         },
