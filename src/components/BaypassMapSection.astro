@@ -1,14 +1,14 @@
 ---
 const cityCosts = {
-    "Castro Valley": 2160.00,
-    "Fremont": 1116.00,
-    "Berkeley": 1696.00,
-    "Walnut Creek": 1908.00,
-    "Santa Rosa": 4688.00,
-    "San Francisco": 2208.00,
-    "Mountain View": 1032.00,
-    "Gilroy": 1392.00,
-    "Daly City": 1752.00,
+    "Castro Valley": 2000.00,       // -$160 VTA
+    "Fremont": 956.00,              // -$160 VTA
+    "Berkeley": 1336.00,            // -$360 VTA
+    "Walnut Creek": 1548.00,        // -$360 VTA
+    "Santa Rosa": 4528.00,          // -$160 VTA
+    "San Francisco": 1888.00,       // -$160 VTA
+    "Mountain View": 872.00,        // -$160 VTA
+    "Gilroy": 1232.00,              // -$160 VTA
+    "Daly City": 1592.00,           // -$160 VTA
 };
 
 import baypassmap from '../assets/baypass-map.png';
@@ -63,10 +63,13 @@ import baypassmap from '../assets/baypass-map.png';
                         <span class="font-bold text-red-600" id="costText">$0.00</span> per semester.
                     </p>
                     <p class="text-xs">
-                        (SJSU's average tuition is around $4,500 per semester)
+
                     </p>
                     <p class="text-lg">
                         With <strong class="text-sjsublue">BayPass</strong>, it would cost them up to <span class="font-bold text-green-600">$50</span>.
+                    </p>
+                    <p class="text-xs">
+                        SJSU's average tuition is around $4,500 per semester. Calculation is 80 round trips per semester, cost not including the VTA EcoPass provided to all SJSU students.
                     </p>
 
                 </div>
@@ -75,17 +78,17 @@ import baypassmap from '../assets/baypass-map.png';
     </div>
 </section>
 
-<script is:script>
+<script is:inline>
     const costs = {
-        "Castro Valley": 2160.00,
-        "Fremont": 1116.00,
-        "Berkeley": 1696.00,
-        "Walnut Creek": 1908.00,
-        "Santa Rosa": 4688.00,
-        "San Francisco": 2208.00,
-        "Mountain View": 1032.00,
-        "Gilroy": 1392.00,
-        "Daly City": 1752.00,
+        "Castro Valley": 2000.00,       // -$160 VTA
+        "Fremont": 956.00,              // -$160 VTA
+        "Berkeley": 1336.00,            // -$360 VTA
+        "Walnut Creek": 1548.00,        // -$360 VTA
+        "Santa Rosa": 4528.00,          // -$160 VTA
+        "San Francisco": 1888.00,       // -$160 VTA
+        "Mountain View": 872.00,        // -$160 VTA
+        "Gilroy": 1232.00,              // -$160 VTA
+        "Daly City": 1592.00,           // -$160 VTA
     };
 
     document.addEventListener('DOMContentLoaded', () => {
