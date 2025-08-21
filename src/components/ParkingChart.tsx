@@ -30,7 +30,7 @@ export default function ParkingChart() {
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis type="number" hide />
                     <YAxis type="category" hide />
-                    <Bar dataKey="parking" stackId="a" fill="#1A5BB4">
+                    <Bar dataKey="parking" stackId="a" fill="#939597">
                         <LabelList
                             dataKey="parking"
                             position="center"

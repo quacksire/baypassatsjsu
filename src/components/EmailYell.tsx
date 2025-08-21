@@ -18,7 +18,7 @@ My name is ${name}, and I’m a student at San José State. I’m writing becaus
 
 Right now, a lot of us are struggling with the cost of getting to campus. Some students spend over $2,000 each semester just on transit fares, while those who drive have to compete for only 7,500 parking spots even though more than 20,000 people come to campus daily. It doesn’t add up, and it makes it harder to focus on school.
 
-BayPass would fix that. During the two-year pilot program, SJSU students with BayPass took 71.5% more trips and made over six times more transfers across transit systems. Surveys also show 61% of students already spend more than BayPass would cost each month. For just $25 a semester, we’d finally have unlimited access to BART, Caltrain, buses, and ferries — and a real chance to get around the Bay Area without breaking the bank.
+BayPass would fix that. During the two-year pilot program, SJSU students with BayPass took 71.5% more trips and made over six times more transfers across transit systems. Surveys also show 61% of students already spend more than BayPass would cost each month. For just $30 a semester, we’d finally have unlimited access to BART, Caltrain, buses, and ferries — and a real chance to get around the Bay Area without breaking the bank.
 
 You can see the full report and details at https://baypassatsjsu.com. The numbers make it clear: BayPass works, and students want it.
 
@@ -88,7 +88,11 @@ export default function EmailYell({
 
     const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
-        window.location.href = mailto;
+
+
+
+        // open in a new tab
+        window.open("https://mail.google.com/a/sjsu.edu/mail/?extsrc=mailto&url=" + encodeURIComponent(mailto));
     };
 
     return (
