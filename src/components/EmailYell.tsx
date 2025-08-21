@@ -91,8 +91,13 @@ export default function EmailYell({
 
 
 
-        // open in a new tab
-        window.open("https://mail.google.com/a/sjsu.edu/mail/?extsrc=mailto&url=" + encodeURIComponent(mailto));
+        // check if mobile
+        if (navigator.userAgent.match(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)) {
+            // just open the mailto link directly
+            window.open(mailto, "_self");
+        } else {
+            window.open("https://mail.google.com/a/sjsu.edu/mail/?extsrc=mailto&url=" + encodeURIComponent(mailto));
+        }
     };
 
     return (
