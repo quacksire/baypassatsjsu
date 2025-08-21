@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@tailwind utilities;
 @import "tw-animate-css";
+
 @theme {
     --font: "Albert Sans Variable", "Segoe UI Variable Display", "Helvetica", "Arial", sans-serif;
     --font-serif: var(--font);
@@ -14,31 +16,7 @@
     --color-sjsuadadarkgrey: #666666;
     --color-sjsurolloverblue: #1C88F4;
     --color-auggold: #b6660b;
-}
-
-@utility shade-color-* {
-    --mr-shadow-color: --value(--color-*);
-}
-
-@utility drop-* {
-    --mr-val: --value(number)px;
-    transform: translate3d(calc(-0.5 * var(--mr-val)), calc(-0.5 * var(--mr-val)), 0);
-    filter: drop-shadow(var(--mr-val) var(--mr-val) 0 var(--mr-shadow-color));
-}
-
-header.navbar {
-    @apply fixed top-0 left-0 z-10 w-full border-transparent px-10 py-6 transition-all duration-200;
-}
-
-header.navbar.scrolled {
-    @apply bg-sjsublue rounded-2xl py-3 px-10 border-sjsugold border-1 shade-color-sjsugold drop-4;
-    --margin-size: calc(var(--spacing) * 4);
-    margin: var(--margin-size);
-    width: calc(100% - var(--margin-size) * 2);
-}
-
-nav.navbar {
-    @apply flex items-center justify-between text-white;
+    --color-augblue: #4CB8FF
 }
 
 @layer base {
@@ -56,4 +34,94 @@ nav.navbar {
         --chart-4: oklch(0.627 0.265 303.9);
         --chart-5: oklch(0.645 0.246 16.439);
     }
+}
+
+/* Utility Fns */
+@utility shade-color-* {
+    --mr-shadow-color: --value(--color-*);
+}
+
+@utility drop-* {
+    --mr-val: --value(number)px;
+    transform: translate3d(calc(-0.5 * var(--mr-val)), calc(-0.5 * var(--mr-val)), 0);
+    filter: drop-shadow(var(--mr-val) var(--mr-val) 0 var(--mr-shadow-color));
+}
+
+
+/* Reusable Classes */
+section {
+    @apply w-full px-6 py-16 md:px-12 lg:px-24
+}
+
+.sect-title {
+    @apply mb-8 mt-[-1] w-full text-center
+}
+
+@utility emph-base {
+    @apply font-black uppercase
+}
+
+.emph-gg {
+    @apply emph-base text-sjsugold shade-color-auggold;
+}
+
+.emph-wg {
+    @apply emph-base text-white shade-color-auggold;
+}
+
+.emph-bb {
+    @apply emph-base text-sjsublue shade-color-augblue;
+}
+
+.emph-br {
+    @apply emph-base text-sjsublue shade-color-sjsurolloverblue
+}
+
+.emph-wb {
+    @apply emph-base text-white shade-color-sjsublue;
+}
+
+.emph-2l {
+    @apply 
+        drop-3.5    md:drop-4 
+        text-7xl    md:text-8xl 
+}
+
+.emph-l {
+    @apply
+        drop-3     md:drop-3.5
+        text-6xl    md:text-7xl
+}
+
+.emph-m {
+    @apply
+        drop-2.5    md:drop-3 
+        text-5xl    md:text-6xl
+}
+
+.emph-s {
+    @apply 
+        drop-2      md:drop-2.5 
+        text-3xl    md:text-5xl 
+}
+
+.button {
+    @apply cursor-pointer bg-sjsublue active:bg-blue-800 shade-color-sjsugold text-white drop-3 hover:drop-6 active:drop-0 focus:outline-none active:ring-4 active:ring-sjsugold transition
+}
+
+
+/* She Style on my Navbar */
+header.navbar {
+    @apply fixed top-0 left-0 z-10 w-full border-transparent px-10 py-6 transition-all duration-200;
+}
+
+header.navbar.scrolled {
+    @apply bg-sjsublue rounded-2xl py-3 px-10 border-sjsugold border-1 shade-color-sjsugold drop-4;
+    --margin-size: calc(var(--spacing) * 4);
+    margin: var(--margin-size);
+    width: calc(100% - var(--margin-size) * 2);
+}
+
+nav.navbar {
+    @apply flex items-center justify-between text-white;
 }

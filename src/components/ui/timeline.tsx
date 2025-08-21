@@ -9,7 +9,7 @@ interface TimelineEntry {
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     return (
         <section className="w-full bg-sjsublue font-sans px-6 py-16 md:px-12 lg:px-24">
-            <h2 className="text-center text-6xl font-black tracking-tight mb-12 text-sjsugold shade-color-auggold drop-3 uppercase ">
+            <h2 className="sect-title emph-gg emph-m">
                 Where we are now
             </h2>
 
@@ -31,8 +31,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                 }`}
                             >
                                 <div
-                                    className={`relative w-full md:w-1/2 px-6 ${
-                                        isLeft ? "md:pr-12 text-right" : "md:pl-12 text-left"
+                                    className={`relative w-full md:w-1/2 px-6 text-left ${
+                                        isLeft ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"
                                     }`}
                                 >
                                     <h3 className="text-4xl font-black text-sjsugold shade-color-auggold drop-2 uppercase">{item.title}</h3>

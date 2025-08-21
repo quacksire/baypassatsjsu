@@ -26,19 +26,18 @@ import transitlogo from "../assets/supporters/transit.png";
 import ParkingChart from "../components/ParkingChart";
 import ImpactComparisonChart from "../components/ImpactComparisonChart";
 import BaypassMapSection from "../components/BaypassMapSection.astro";
+import StatCard from "../components/StatCard";
+import Separator from "../components/Separator.astro";
 ---
 
 <Layout>
 	<main>
 		<HeroSectionBaypass />
-		<section class='w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24'>
-			<div class='mb-8 mt-[-1] w-full text-center'>
+
+		<section class='bg-sjsublue'>
+			<div class='sect-title'>
 				<h2 class='text-4xl font-black text-white'>SJSU has a</h2>
-				<h3
-					class='mt-2 text-6xl md:text-8xl font-black uppercase text-sjsugold
-               drop-4 shade-color-auggold underline
-               decoration-4 underline-offset-8'
-				>
+				<h3 class='emph-2l emph-gg decoration-4 underline underline-offset-8'>
 					Car Problem
 				</h3>
 			</div>
@@ -81,20 +80,19 @@ import BaypassMapSection from "../components/BaypassMapSection.astro";
 				</div>
 			</div>
 		</section>
-		<section class='w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24'>
-			<h2
-				class='mt-2 text-5xl font-black text-sjsugold
-               drop-4 shade-color-auggold
-               decoration-4 text-center'
-			>
+
+
+
+		<section class='bg-gold'>
+			<h2 class='emph-m emph-br sect-title'>
 				Parking vs. People
 			</h2>
 
 			<div class='mx-auto max-w-3xl text-center mb-12'>
-				<p class='text-xl text-white'>
-					Every day, over <strong
-						>20,000 students, faculty, and staff</strong
-					> arrive on campus. But there are only <strong>7,500</strong
+				<p class='text-xl text-black'>
+					Every day, over 
+					<strong class="text-sjsublue">20,000 students, faculty, and staff</strong
+					> arrive on campus. But there are only <strong class="text-sjsublue">7,500</strong
 					> parking spaces. That math doesn't work — and it’s why transit
 					matters.
 				</p>
@@ -103,11 +101,11 @@ import BaypassMapSection from "../components/BaypassMapSection.astro";
 			<ParkingChart client:load />
 		</section>
 
-		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
+
+
+		<section class='bg-white'>
 			<!-- Heading -->
-			<h2
-				class='text-center text-5xl font-black uppercase text-sjsublue mb-12'
-			>
+			<h2 class='emph-bb emph-m text-center mb-12'>
 				The Solution?
 			</h2>
 
@@ -167,142 +165,82 @@ import BaypassMapSection from "../components/BaypassMapSection.astro";
 
 		<BaypassMapSection />
 
-		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
+		<section class='bg-sjsublue'>
 			<!-- Section Title -->
-			<h2
-				class='text-center text-6xl mt-2 md:text-7xl font-black mb-10 text-sjsugold'
-			>
-				There's already results
-				<!-- add a note saying during "the pilot program" and link the pdf -->
-				<p class='mt-2 text-lg text-sjsublue drop-0'>
-					(Note: These statistics are from the 2 year pilot program
-					which ended May 2024. See the full report <a
-						href='https://ducks.win/MTCBayPassPhase1Final'
-						target='_blank'
-						class='text-sjsugold'>here</a
-					>.)
-				</p>
-			</h2>
-
-			<!-- Statistics Cards Container -->
-			<div
-				class='max-w-7xl mx-auto flex flex-wrap justify-center gap-8 shade-color-auggold drop-6 '
-			>
-				<!-- Card 1 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						+30%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						More transit trips taken by students with BayPass
-					</p>
-				</div>
-
-				<!-- Card 2 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						+71.5%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						Average increase in trips by SJSU students with BayPass
-					</p>
-				</div>
-
-				<!-- Card 3 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						+163%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						More transfers across transit agencies with BayPass
-					</p>
-				</div>
-
-				<!-- Card 4 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-7xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						+623.5%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						Average transfer increase by SJSU BayPass riders
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<section class='w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24'>
-			<!-- Section Title -->
-			<h2
-				class='text-center text-6xl mt-2 md:text-7xl font-black uppercase text-white mb-10 shade-color-auggold drop-4'
-			>
-				Students <span class='text-sjsugold'>Want BayPass</span>
+			<h2 class='sect-title emph-l emph-gg py-8'>
+				Students <span class='emph-wg'>Want BayPass</span>
 			</h2>
 
 			<!-- Statistics Cards Container -->
 			<div
 				class='max-w-7xl mx-auto flex flex-wrap justify-center gap-8 shade-color-auggold drop-6'
 			>
-				<!-- Card 1 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						86%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						of students use public transportation very frequently
-					</p>
-				</div>
 
-				<!-- Card 2 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						61%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						of students spend more than the cost of BayPass on
-						transit fares monthly
-					</p>
-				</div>
+				<StatCard value="86" client:load>
+					of students use public transportation very frequently
+				</StatCard>
 
-				<!-- Card 3 -->
-				<div class='w-full sm:w-1/3 bg-white rounded-2xl p-8 shadow-lg outline-1'>
-					<h3
-						class='text-8xl font-black text-sjsugold shade-color-auggold drop-3'
-						style='letter-spacing: -5px'
-					>
-						30%
-					</h3>
-					<p class='mt-4 text-lg text-clipper text-center'>
-						of students’ main issue with transit can be solved with
-						BayPass
-					</p>
-				</div>
+				<StatCard value="61" client:load>
+					of students spend more than the cost of BayPass on transit fares monthly
+				</StatCard>
+				
+
 			</div>
 		</section>
 
-		<TimelineBaypass />
+		<Separator/>
 
-		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24' id='who'>
+		<section class='bg-sjsublue'>
 			<!-- Section Title -->
 			<h2
-				class='text-center text-6xl font-black text-sjsublue mb-12 uppercase'
+				class='sect-title emph-l emph-gg pb-8'
+			>
+				Baypass <span class="emph-wg">Works</span>
+				
+			</h2>
+			
+
+			<!-- Statistics Cards Container -->
+			<div
+				class='max-w-7xl mx-auto flex flex-wrap justify-center gap-8 shade-color-auggold drop-6 '
+			>
+
+				<StatCard value="30" client:load>
+					More transit trips taken by students with BayPass
+				</StatCard>
+
+				<StatCard value="71.5" client:load>
+					Average increase in trips by SJSU students with BayPass
+				</StatCard>
+
+				<StatCard value="163" client:load>
+					More transfers across transit agencies with BayPass
+				</StatCard>
+
+				<StatCard value="623.5" client:load>
+					Average transfer increase by SJSU BayPass riders
+				</StatCard>
+				
+			</div>
+
+			<p class='text-center text-md mt-8 text-sjsuadalightgrey uppercase'>
+					(Note: Statistics are from the 2 year pilot program
+					which ended May 2024. See the full report <a
+						href='https://ducks.win/MTCBayPassPhase1Final'
+						target='_blank'
+						class='text-sjsugold'>here</a
+					>.)
+				</p>
+		</section>
+
+		<Separator/>
+
+		<TimelineBaypass />
+
+		<section class='bg-white' id='who'>
+			<!-- Section Title -->
+			<h2
+				class='sect-title emph-m emph-bb'
 			>
 				Who we are
 			</h2>
@@ -403,10 +341,10 @@ import BaypassMapSection from "../components/BaypassMapSection.astro";
 			</div>
 		</section>
 
-		<section class='w-full bg-white px-6 py-16 md:px-12 lg:px-24'>
+		<section class='bg-sjsublue'>
 			<!-- Section Title (white text with thick yellow drop shadow) -->
 			<h2
-				class='text-center text-6xl font-black text-sjsugold mb-12'
+				class='sect-title emph-m emph-gg'
 			>
 				Our supporters
 			</h2>
