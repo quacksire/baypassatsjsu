@@ -1,9 +1,5 @@
 ---
-import HeroSectionBaypass from "../components/HeroSectionBaypass";
-import EmailYell from "../components/EmailYell.tsx";
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 
 <Layout>
@@ -18,11 +14,36 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <!-- Email Section -->
+    <!-- Update Section -->
     <section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
       <div class="max-w-7xl mx-auto">
-        <div class="mx-auto max-w-4xl mb-10 text-clipper text-lg">
-          <EmailYell client:load />
+        <div class="mx-auto max-w-4xl text-clipper text-xl space-y-6">
+          <p class="font-semibold text-black">We did it! We got a response.</p>
+
+          <blockquote class="border-l-4 border-sjsugold pl-4 text-black">
+            <p>
+              Dear Spartan,<br/><br/>
+              Thank you for reaching out and sharing your perspective. Finding more ways for students to travel to campus affordably and efficiently is an important issue. We are currently in discussions with Associated Students about transportation options, including BayPass. As you may know, the SmartPass program-funded by student fees-currently provides unlimited rides on VTA local buses, rapid routes, and light rail. We expect to share more updates about additional options in the coming weeks.<br/><br/>
+              Please continue bringing your stories, issues, and concerns forward-they are vital in shaping our campus community. If you are interested in the BayPass, I encourage you to share your perspective with Associated Students by connecting with their leadership through the AS Board of Directors.<br/><br/>
+              Sincerely,<br/>
+              Office of the President
+            </p>
+          </blockquote>
+
+          <p class="text-black">
+            Together, we sent over <span class="font-bold">400 emails</span> to the administration. We got <span class="font-extrabold text-sjsugold">President Cynthia Teniente-Matson</span>'s attention,
+            but this is just the beginning. The administration has acknowledged the issue,
+            and now it’s up to us to keep pushing until BayPass becomes a reality for every student.
+          </p>
+
+          <!-- Call to Action Banner -->
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-2">Next stop: keep the momentum going</h3>
+            <p class="mb-4">See how you can help us push for BayPass at SJSU.</p>
+            <a href="/thanks" class="button mt-2 inline-block rounded-xl font-bold bg-white px-5 py-3 font-white uppercase tracking-wide">
+              Take Action →
+            </a>
+          </div>
         </div>
       </div>
     </section>

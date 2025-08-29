@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { IconChevronLeft } from "@tabler/icons-react";
+import { IconChevronLeft, IconClock, IconMapPin, IconInfoCircle } from "@tabler/icons-react";
 ---
 
 <Layout>
@@ -10,41 +10,255 @@ import { IconChevronLeft } from "@tabler/icons-react";
             <div class="mb-6 w-full text-center mt-15">
                 <h1 class="text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]">Attend</h1>
                 <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-sjsugold">
-
+                    Upcoming public meeting dates & details
                 </h2>
             </div>
         </section>
 
-        <!--
-        <li>Short prep guide and talking points</li>
-                            <li>Show up with other students</li>
-                            <li>Be visible and be heard</li>
-                            -->
-
-
         <section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
-            <!-- Dates coming soon -->
             <div class="max-w-7xl mx-auto">
-                <div class="mx-auto max-w-4xl mb-10 text-clipper text-lg">
-                    <p>
-                        Participating in and providing public comment at SJSU meetings shows the administration that students care about affordable, unlimited transit.
+                <div class="mx-auto max-w-4xl mb-6 text-clipper text-lg">
+                    Public Forum is your chance to tell the A.S. Board why affordable, unlimited transit like BayPass matters.
+                    Any student can sign up, either on the clipboard in person or in the chat online. Each speaker has up to
+                    <span class="font-semibold">3 minutes</span> to share their story or concerns. This is the most direct way
+                    to put BayPass on the record.
+                </div>
+
+                <!-- Cadence + Public Comment Tip -->
+                <div class="mx-auto max-w-5xl mb-5 rounded-2xl border border-sjsublue/15 bg-sjsublue/5 p-5">
+                    <div class="flex items-start gap-3">
+                        <IconInfoCircle class="w-6 h-6 text-sjsublue shrink-0 mt-0.5" />
+                        <div class="text-black/90 space-y-1">
+                            <p class="font-semibold">
+                                Meetings are held every other week — roughly twice a month.
+                            </p>
+                            <p>
+                                <span class="font-semibold">Public Comment Tip:</span> Arrive a little early to add your name to the speaker list and
+                                share why you want BayPass for SJSU students. Each public comment is up to <span class="font-semibold">3 minutes</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- “Next meeting” dynamic status -->
+                <div class="mx-auto max-w-5xl mb-5 rounded-2xl border border-sjsublue/15 p-5">
+                    <p class="text-lg">
+                        <span class="font-semibold text-sjsublue">Next meeting:</span>
+                        <span id="next-meeting-text" class="ml-1">Calculating…</span>
+                    </p>
+
+                    <div id="zoom-link" class="hidden">
+                        <a
+                                href="https://sjsu.zoom.us/j/85916216835"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-3 bg-sjsugold text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-clipper transition"
+                        >
+                            Join via Zoom →
+                            <span
+                                    id="zoom-live-badge"
+                                    class="hidden inline-flex items-center gap-1 rounded-full bg-red-600 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wide"
+                            >
+      <span class="inline-block w-2 h-2 rounded-full bg-white/90"></span>
+      Live
+    </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Time & Location -->
+                <div class="mx-auto max-w-5xl mt-5 mb-5 rounded-2xl bg-sjsublue/5 border border-sjsublue/15 p-6">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <IconClock class="w-6 h-6 text-sjsublue shrink-0 mt-0.5" />
+                            <p class="text-lg">
+                                <span class="font-semibold">Time:</span> 3:00 PM PDT to 5:30 PM PDT
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <IconMapPin class="w-6 h-6 text-sjsublue shrink-0 mt-0.5" />
+                            <p class="text-lg">
+                                <span class="font-semibold">Location:</span> Student Union Meeting Room 1A
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dates -->
+                <div class="mx-auto max-w-5xl grid grid-cols-1 gap-8">
+                    <!-- Summer/Fall 2025 -->
+                    <div class="rounded-2xl border border-sjsublue/15 p-5 shadow-sm">
+                        <h3 class="text-xl font-bold text-sjsublue mb-3">Summer/Fall 2025</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li data-meeting="2025-06-20T15:00:00-07:00">June 20, 2025</li>
+                            <li data-meeting="2025-07-23T15:00:00-07:00">July 23, 2025</li>
+                            <li data-meeting="2025-08-27T15:00:00-07:00">August 27, 2025</li>
+                            <li data-meeting="2025-09-10T15:00:00-07:00">September 10, 2025</li>
+                            <li data-meeting="2025-09-24T15:00:00-07:00">September 24, 2025</li>
+                            <li data-meeting="2025-10-08T15:00:00-07:00">October 8, 2025</li>
+                            <li data-meeting="2025-10-22T15:00:00-07:00">October 22, 2025</li>
+                            <li data-meeting="2025-11-12T15:00:00-08:00">November 12, 2025</li>
+                            <li data-meeting="2025-11-26T15:00:00-08:00">November 26, 2025</li>
+                            <li data-meeting="2025-12-10T15:00:00-08:00">December 10, 2025</li>
+                        </ul>
+                    </div>
+
+                    <!-- Spring 2026
+                    <div class="rounded-2xl border border-sjsublue/15 p-5 shadow-sm">
+                        <h3 class="text-xl font-bold text-sjsublue mb-3">Spring 2026</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li data-meeting="2026-01-28T15:00:00-08:00">January 28, 2026</li>
+                            <li data-meeting="2026-02-11T15:00:00-08:00">February 11, 2026</li>
+                            <li data-meeting="2026-02-25T15:00:00-08:00">February 25, 2026</li>
+                            <li data-meeting="2026-03-11T15:00:00-08:00">March 11, 2026</li>
+                            <li data-meeting="2026-03-25T15:00:00-08:00">March 25, 2026</li>
+                            <li data-meeting="2026-04-08T15:00:00-07:00">April 8, 2026</li>
+                            <li data-meeting="2026-04-22T15:00:00-07:00">April 22, 2026</li>
+                            <li data-meeting="2026-05-13T15:00:00-07:00">May 13, 2026</li>
+                        </ul>
+                    </div>
+                    -->
+                </div>
+
+
+
+                <!-- What is A.S.? -->
+                <div class="mx-auto max-w-5xl mt-6 rounded-2xl border border-sjsublue/15 p-6">
+                    <h3 class="text-xl font-bold text-sjsublue mb-2">What is Associated Students (A.S.)?</h3>
+                    <p class="text-lg">
+                        Associated Students is SJSU’s student government and campus service organization. Learn more about how A.S. represents you and how to get involved:
+                        <a
+                                href="https://www.sjsu.edu/as/departments/government/index.php"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-sjsugold font-semibold underline decoration-2 underline-offset-2 hover:opacity-80"
+                        >
+                            Visit the A.S. Student Government page
+                        </a>.
                     </p>
                 </div>
-                <p class="mx-auto max-w-3xl text-lg text-sjsugold text-center font-bold leading-relaxed mb-5">
-                    Dates coming soon
-                </p>
 
                 <!-- go back button -->
-                <div class="text-center">
-                    <a href="/thanks" class=" text-white font-bold inline-block rounded-xl bg-sjsugold px-5 py-3 uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40">
+                <div class="text-center mt-10">
+                    <a
+                            href="/thanks"
+                            class="text-white font-bold inline-block rounded-xl bg-sjsugold px-5 py-3 uppercase tracking-wide shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+                    >
                         <div class="flex items-center justify-center gap-2">
                             <IconChevronLeft class="w-5 h-5" />
                             Go back
                         </div>
                     </a>
                 </div>
-
-
+            </div>
         </section>
     </main>
+
+    <!-- Client-side script to compute "Next meeting is …", strike past items, and highlight next -->
+    <script>
+        // Collect all meeting datetimes from the DOM
+        const nodes = Array.from(document.querySelectorAll("[data-meeting]"));
+        const meetings = nodes
+            .map(n => ({ el: n, date: new Date(n.getAttribute("data-meeting")) }))
+            .filter(x => !Number.isNaN(x.date.getTime()))
+            .sort((a, b) => a.date - b.date);
+
+        const now = new Date();
+
+        // Assume 2.5 hours duration to consider "underway" vs "past"
+        const DUR_MS = 150 * 60 * 1000;
+
+        // Find the next meeting (hasn't ended yet)
+        const next = meetings.find(x => now < new Date(x.date.getTime() + DUR_MS));
+
+        // Show Zoom link only if today is a meeting day
+        const zoomEl = document.getElementById("zoom-link");
+        if (zoomEl && next) {
+            const today = new Date();
+            const isSameDay =
+                today.getFullYear() === next.date.getFullYear() &&
+                today.getMonth() === next.date.getMonth() &&
+                today.getDate() === next.date.getDate();
+
+            if (isSameDay) {
+                zoomEl.classList.remove("hidden");
+            }
+        }
+
+        // After you compute `next` (and after you handle showing the zoom link for the day):
+        const liveBadge = document.getElementById("zoom-live-badge");
+        if (liveBadge && next) {
+            const start = next.date;                          // meeting start
+            const end = new Date(start.getTime() + 150 * 60 * 1000); // 2.5 hours later
+            const now2 = new Date();
+
+            // Show "Live" ONLY if we're within the meeting window
+            if (now2 >= start && now2 <= end) {
+                liveBadge.classList.remove("hidden");
+
+                // Optional: if you want to ensure the link is visible when live (even if you hide it outside the window)
+                const zoomEl = document.getElementById("zoom-link");
+                if (zoomEl) zoomEl.classList.remove("hidden");
+            }
+        }
+
+        // Decorate list:
+        // - Past meetings: line-through + faded
+        // - Next meeting: gold highlight
+        meetings.forEach(({ el, date }) => {
+            const ended = now >= new Date(date.getTime() + DUR_MS);
+            if (ended) {
+                el.classList.add("line-through", "opacity-60");
+            }
+            if (next && date.getTime() === next.date.getTime()) {
+                el.classList.add(
+                    "bg-sjsugold/20",
+                    "ring-2",
+                    "ring-sjsugold",
+                    "rounded-md",
+                    "px-2",
+                    "py-1",
+                    "font-semibold"
+                );
+            }
+        });
+
+        // Status text for the upcoming meeting
+        function formatNext(start) {
+            if (!start) return "No upcoming meetings listed";
+
+            const diffMs = start.date - now;
+            const oneHour = 60 * 60 * 1000;
+            const oneDay = 24 * oneHour;
+
+            const sameDay =
+                start.date.getFullYear() === now.getFullYear() &&
+                start.date.getMonth() === now.getMonth() &&
+                start.date.getDate() === now.getDate();
+
+            if (diffMs <= 0) {
+                if (sameDay) return "today (already underway)";
+                const days = Math.ceil((now - start.date) / oneDay);
+                return days === 1 ? "yesterday" : `${days} days ago`;
+            }
+
+            if (diffMs < oneHour) {
+                const mins = Math.max(1, Math.round(diffMs / (60 * 1000)));
+                return mins === 60 ? "in 1 hour" : `in ${mins} minute${mins === 1 ? "" : "s"}`;
+            }
+
+            if (sameDay) {
+                const hours = Math.round(diffMs / oneHour);
+                return hours === 1 ? "in 1 hour" : `today in ${hours} hours`;
+            }
+
+            const days = Math.round(diffMs / oneDay);
+            if (days === 1) return "tomorrow";
+            return `in ${days} days`;
+        }
+
+        const target = document.getElementById("next-meeting-text");
+        if (target) target.textContent = formatNext(next);
+    </script>
 </Layout>

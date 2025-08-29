@@ -21,7 +21,7 @@
 
 @layer base {
      :root {
-        --chart-1: -;
+        --chart-1: oklch(0.488 0.243 264.376)
         --chart-2: oklch(0.6 0.118 184.704);
         --chart-3: oklch(0.398 0.07 227.392);
         --chart-4: oklch(0.828 0.189 84.429);
@@ -82,9 +82,9 @@ section {
 }
 
 .emph-2l {
-    @apply 
-        drop-3.5    md:drop-4 
-        text-7xl    md:text-8xl 
+    @apply
+        drop-3.5    md:drop-4
+        text-7xl    md:text-8xl
 }
 
 .emph-l {
@@ -95,14 +95,14 @@ section {
 
 .emph-m {
     @apply
-        drop-2.5    md:drop-3 
+        drop-2.5    md:drop-3
         text-5xl    md:text-6xl
 }
 
 .emph-s {
-    @apply 
-        drop-2      md:drop-2.5 
-        text-3xl    md:text-5xl 
+    @apply
+        drop-2      md:drop-2.5
+        text-3xl    md:text-5xl
 }
 
 .button {
