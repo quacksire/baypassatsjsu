@@ -8,7 +8,7 @@ interface TimelineEntry {
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     return (
-        <section className="w-full bg-sjsublue font-sans px-6 py-16 md:px-12 lg:px-24">
+        <section className="bg-sjsublue font-sans px-6 py-16 md:px-12 lg:px-24">
             <h2 className="sect-title emph-gg emph-m">
                 Where we are now
             </h2>

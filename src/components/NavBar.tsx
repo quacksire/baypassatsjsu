@@ -36,12 +36,12 @@ export default function NavbarBaypass() {
                     <Logo />
                 </a>
                 <ul className="flex gap-8 text-md font-black uppercase shade-color-auggold">
-                    <li className="hover:drop-2 transition duration-200">
+                    <li className="hover:drop-2 transition duration-200 active:drop-0">
                         <a href="https://sjsu.qualtrics.com/jfe/form/SV_bDvakzIZSe3K3mm?source=Website">
                             Sign
                         </a>
                     </li>
-                    <li className="hover:drop-2 transition duration-200">
+                    <li className="hover:drop-2 transition duration-200 active:drop-0">
                         <a href="/#who">About Us</a>
                     </li>
                 </ul>
