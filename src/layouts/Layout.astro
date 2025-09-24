@@ -1,109 +1,136 @@
----
-import '../styles/global.css';
+	---
+	import '../styles/global.css';
 
-import "@fontsource-variable/albert-sans"; // Defaults to wght axis
-import "@fontsource-variable/albert-sans/wght.css"; // Specify axis
-import "@fontsource-variable/albert-sans/wght-italic.css"; // Specify axis and style
-import '@fontsource/archivo-black'
+	import "@fontsource-variable/albert-sans"; // Defaults to wght axis
+	import "@fontsource-variable/albert-sans/wght.css"; // Specify axis
+	import "@fontsource-variable/albert-sans/wght-italic.css"; // Specify axis and style
+	import '@fontsource/archivo-black'
 
-import NavbarBaypass from "../components/NavBar"
-import {IconBrandInstagram, IconBrandBluesky, IconArrowUp, IconMail, IconBrandTiktok} from "@tabler/icons-react";
----
+	import NavbarBaypass from "../components/NavBar"
+	import PersistentToast from "../components/PersistentToast"
+	import {IconBrandInstagram, IconBrandBluesky, IconArrowUp, IconMail, IconBrandTiktok} from "@tabler/icons-react";
+	import ToastExamples from '../components/ToastExamples';
+	---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="theme-color" content="#0055A2"/>
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<meta property="og:image" content="/opengraph.png" />
-		<meta name="twitter:card" content="summary_large_image">
-		<title>BayPass at SJSU</title>
-		<meta name="description" content="BayPass at SJSU is a student-led initiative to secure affordable, unlimited transit for all students at San Jose State University." />
-	</head>
-	<body class="bg-white text-black">
-	<!-- awww, you like poking around this basic Astro + Tailwind site that we host on Cloudflare? -->
-	<!-- we're flattered, but you should at least connect with us on linkedin if you're going to be so nosy. -->
-	<!-- https://www.linkedin.com/in/sam-jeffs/ -->
-	<!-- https://www.linkedin.com/in/zyjay/ -->
-	<!-- we're always looking for more people to help out, so if you want to get involved, reach out! -->
-	<!-- just tell us you found this message :3 -->
-		<NavbarBaypass client:load/>
-		<slot />
-	</body>
+	<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width" />
+			<meta name="theme-color" content="#0055A2"/>
+			<link rel="icon" type="image/png" href="/favicon.png" />
+			<meta name="generator" content={Astro.generator} />
+			<meta property="og:image" content="/opengraph.png" />
+			<meta name="twitter:card" content="summary_large_image">
+			<title>BayPass at SJSU</title>
+			<meta name="description" content="BayPass at SJSU is a student-led initiative to secure affordable, unlimited transit for all students at San Jose State University." />
+			<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js" />
+		</head>
+		<body class="bg-white text-black">
+		<!-- awww, you like poking around this basic Astro + Tailwind site that we host on Cloudflare? -->
+		<!-- we're flattered, but you should at least connect with us on linkedin if you're going to be so nosy. -->
+		<!-- https://www.linkedin.com/in/sam-jeffs/ -->
+		<!-- https://www.linkedin.com/in/zyjay/ -->
+		<!-- we're always looking for more people to help out, so if you want to get involved, reach out! -->
+		<!-- just tell us you found this message :3 -->
+			<NavbarBaypass client:load/>
+			<slot />
 
-	<footer class="w-full bg-white text-neutral-800 px-6 py-12 md:px-12 lg:px-24">
-		<div class="w-full mx-auto flex flex-col items-center justify-between">
-			{/* Center: Socials */}
-			<div class="flex gap-6 items-center m-6">
-				<a
-					href="https://www.tiktok.com/@baypassatsjsu"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="hover:text-pink-500 transition"
-				>
-					<IconBrandTiktok className="w-5 h-5" />
-				</a>
+			<PersistentToast
+				client:load
+				title="Make your voice heard! "
+				message="Make a public comment at the upcoming AS Board Meeting to support BayPass for SJSU."
+				actionText="Learn More"
+				actionUrl="/meetings"
+				variant="default"
+				storageKey="attend-meeting-sep24-toast-dismissed"
+			/>
 
-				<a
-					href="https://bsky.app/profile/baypassatsjsu.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="hover:text-blue-600 transition"
-				>
-					<IconBrandBluesky className="w-5 h-5" />
-				</a>
+			<!--
+			<PersistentToast
+				client:load
+				title="Take Action"
+				message="Help us bring BayPass to SJSU! Sign our petition and show your support for affordable transit."
+				actionText="Sign Petition"
+				actionUrl="/yell"
+				variant="default"
+				storageKey="baypass-toast-dismissed"
+			/>
+			Persistent Toast -->
+		</body>
 
-				<a
-					href="https://instagram.com/baypassatsjsu"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="hover:text-pink-500 transition"
-				>
-					<IconBrandInstagram className="w-5 h-5" />
-				</a>
+		<footer class="w-full bg-white text-neutral-800 px-6 py-12 md:px-12 lg:px-24">
+			<div class="w-full mx-auto flex flex-col items-center justify-between">
+				{/* Center: Socials */}
+				<div class="flex gap-6 items-center m-6">
+					<a
+						href="https://www.tiktok.com/@baypassatsjsu"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="hover:text-pink-500 transition"
+					>
+						<IconBrandTiktok className="w-5 h-5" />
+					</a>
 
-				<a
-					href="mailto:hi@baypassatsjsu.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="hover:text-blue-600 transition"
-				>
-					<IconMail className="w-5 h-5" />
-				</a>
+					<a
+						href="https://bsky.app/profile/baypassatsjsu.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="hover:text-blue-600 transition"
+					>
+						<IconBrandBluesky className="w-5 h-5" />
+					</a>
+
+					<a
+						href="https://instagram.com/baypassatsjsu"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="hover:text-pink-500 transition"
+					>
+						<IconBrandInstagram className="w-5 h-5" />
+					</a>
+
+					<a
+						href="mailto:hi@baypassatsjsu.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="hover:text-blue-600 transition"
+					>
+						<IconMail className="w-5 h-5" />
+					</a>
+				</div>
+
+				{/* Right: Actions */}
+				<div class="flex gap-4 items-center">
+					<a
+						href="#"
+						class="flex items-center gap-1 text-sm text-neutral-800 hover:text-blue-600 transition"
+					>
+						<IconArrowUp className="w-4 h-4" />
+						Back to top
+					</a>
+				</div>
+
+
+				<div class="flex gap-4 items-center mt-5">
+					<p class="text-sm text-center md:text-left">
+						© {new Date().getFullYear()} Sam Jeffs & Zyjay Cruz with design from Joseph Liu<br/>
+				</p>
+				</div>
+
+
 			</div>
-
-			{/* Right: Actions */}
-			<div class="flex gap-4 items-center">
-				<a
-					href="#"
-					class="flex items-center gap-1 text-sm text-neutral-800 hover:text-blue-600 transition"
-				>
-					<IconArrowUp className="w-4 h-4" />
-					Back to top
-				</a>
-			</div>
+		</footer>
+	</html>
 
 
-			<div class="flex gap-4 items-center mt-5">
-				<p class="text-sm text-center md:text-left">
-					© {new Date().getFullYear()} Sam Jeffs & Zyjay Cruz with design from Joseph Liu<br/>
-			</p>
-			</div>
 
-
-		</div>
-	</footer>
-</html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		scroll-behavior: smooth !important;
-	}
-</style>
+	<style>
+		html,
+		body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			scroll-behavior: smooth !important;
+		}
+	</style>
