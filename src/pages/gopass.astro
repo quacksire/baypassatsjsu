@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import caltrainlogo from "../assets/caltrain-logo.png";
+import clipperbaypass from "../assets/Clipper-BayPass_Logo.svg";
+---
+
+<Layout>
+    <main>
+        <!-- Hero -->
+        <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+            <div class="mb-6 w-full text-center mt-15">
+                <h1 class="text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]">
+                    Caltrain GoPass vs. BayPass
+                </h1>
+                <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-sjsugold">
+                    Why pay more for less coverage?
+                </h2>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="w-full bg-white px-6 py-12 md:px-12 lg:px-24">
+            <div class="max-w-5xl mx-auto space-y-6 text-lg text-black">
+                <p>
+                    In October 2025, <strong class="text-sjsugold">Transportation Solutions (TS)</strong> launched
+                    the <strong class="text-red-500 font-extrabold">Caltrain GoPass</strong>, a $99 annual pass that provides unlimited
+                    rides on <strong>Caltrain only</strong>. While it is a good option for students who live near a Caltrain station,
+                    it leaves out many SJSU commuters who depend on multiple transit systems to reach campus.
+                </p>
+
+                <p>
+                    The <strong class="text-clipper font-extrabold">Clipper BayPass</strong> gives everyone more flexibility.
+                    It connects <strong>over 23 transit agencies across the Bay Area</strong>, making it easy for students to take
+                    <strong>Muni</strong> or <strong>AC Transit</strong> from their homes in San Francisco or the East Bay,
+                    ride <strong>BART</strong> or <strong>Caltrain</strong> into the South Bay, and transfer to <strong>VTA</strong>
+                    for the final trip to SJSU. <strong>All covered for free with a single pass.</strong>
+                </p>
+
+                <p>
+                    BayPass covers whatever, wherever students need to go, and at <strong class="text-sjsugold">half the cost of GoPass</strong>.
+                    It is the most affordable and flexible way for Spartans across the region to reach classes, internships, and opportunities
+                    throughout the Bay Area.
+                </p>
+            </div>
+        </section>
+
+        <!-- Comparison Grid -->
+        <section class="w-full bg-neutral-50 px-6 py-16 md:px-12 lg:px-24">
+            <h2 class="text-center text-4xl font-black text-sjsublue mb-12">
+                Side-by-Side Comparison
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto text-lg">
+                <!-- GoPass Card -->
+                <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm flex flex-col justify-between hover:shadow-md">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <img src={caltrainlogo.src} alt="Caltrain logo" class="h-10 w-auto" />
+                            <h3 class="text-2xl text-red-500 font-extrabold">Caltrain GoPass</h3>
+                        </div>
+
+                        <ul class="space-y-2">
+                            <li>✅ Unlimited rides on Caltrain (Zones 1–6)</li>
+                            <li>🚫 Does <strong>not</strong> include BART, VTA, AC Transit, or Muni</li>
+                            <li>💳 Requires separate physical Clipper card for SmartPass users</li>
+                            <li>📅 Valid through July 31, 2026 (academic year)</li>
+                        </ul>
+
+                        <p class="mt-6 text-neutral-600 text-sm">
+                            Offered by <strong>Transportation Solutions</strong> starting October 1, 2025. Application required.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-neutral-200 text-right">
+                        <div class="text-4xl font-black text-red-500">$99.00</div>
+                        <div class="text-xs tracking-wider text-neutral-600 uppercase">per academic year</div>
+                    </div>
+                </div>
+
+                <!-- BayPass Card -->
+                <div class="rounded-xl border-4 border-sjsugold bg-yellow-50 p-8 shadow-lg flex flex-col justify-between hover:shadow-md">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <img src={clipperbaypass.src} alt="Clipper BayPass logo" class="h-10 w-auto" />
+                            <h3 class="text-2xl text-clipper font-extrabold">Clipper BayPass</h3>
+                        </div>
+
+                        <ul class="space-y-2">
+                            <li>✅ Unlimited rides across <strong>23+ agencies</strong> in the Bay Area</li>
+                            <li>🚆 Includes <strong>Caltrain, BART, VTA, AC Transit, SamTrans, Muni</strong>, and more</li>
+                            <li>🅿️ Includes <strong>free BART station parking</strong></li>
+                            <li>🌎 Works on buses, trains, and ferries, all in one card</li>
+                        </ul>
+
+                        <p class="mt-6 text-neutral-600 text-sm">
+                            A program by the <strong>Metropolitan Transportation Commission (MTC)</strong>,
+                            designed to unify transit access across the Bay Area.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-neutral-200 text-right">
+                        <div class="text-4xl font-black text-sjsugold">$50.00</div>
+                        <div class="text-xs tracking-wider text-neutral-600 uppercase">per academic year</div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="max-w-3xl mx-auto mt-8 text-sm text-neutral-600 text-center leading-relaxed">
+                <span class="font-black text-black">*</span> BayPass pricing is based on proposed $25/semester cost.
+                Final pricing and implementation details will be determined by the
+                <strong>Campus Fee Committee</strong> and student vote.
+            </p>
+        </section>
+
+        <!-- Takeaway -->
+        <section class="bg-sjsugold py-12 px-6 md:px-12 lg:px-24 text-center">
+            <h3 class="text-3xl font-extrabold text-white mb-4">
+                One pass to ride them all.
+            </h3>
+            <p class="text-lg text-white max-w-3xl mx-auto mb-6 leading-relaxed">
+                The <strong class="text-clipper font-extrabold">Clipper BayPass</strong> costs half as much as GoPass
+                and opens up the entire Bay Area, from Gilroy to Santa Rosa, for the price of a few bobas 🧋.
+            </p>
+            <a
+                    href="/"
+                    class="mt-2 inline-block rounded-xl font-bold bg-white px-5 py-3 uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sjsugold/40"
+            >
+                Learn More About BayPass →
+            </a>
+        </section>
+    </main>
+</Layout>
