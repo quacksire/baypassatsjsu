@@ -37,15 +37,12 @@ export default function TimelineBaypass() {
             title: "2024 to Mar 2025",
             content: (
                 <p>
-                    <strong className="block font-extrabold mb-1">Limited staff capacity</strong>
-                    <span className="font-extrabold text-sjsugold">Transportation Solutions</span>{" "}
-                    operated with one full-time staff member and one or two student assistants, and
-                    had no manager to lead a fee-change workflow. As a result,{" "}
-                    <strong className="font-extrabold">
-                        no formal action on{" "}
-                        <span className="font-extrabold text-augblue">BayPass</span> advanced beyond
-                        the October 2024 discussions.
-                    </strong>
+                    <strong className="block font-extrabold mb-1">No formal action taken</strong>
+                    During this period,{" "}
+                    <span className="font-extrabold text-sjsugold">SJSU</span> did not advance any
+                    formal steps toward a{" "}
+                    <span className="font-extrabold text-augblue">BayPass</span> renewal. Planning
+                    discussions remained on hold at this time.
                 </p>
             ),
         },
@@ -56,8 +53,7 @@ export default function TimelineBaypass() {
                     <strong className="block font-extrabold mb-1">
                         Pilot ended with no renewal decision
                     </strong>
-                    Phase 1 concluded in June 2025. Because of staff shortages and leadership
-                    transitions,{" "}
+                    Phase 1 concluded in June 2025. Because of internal transitions,{" "}
                     <span className="font-extrabold text-sjsugold">SJSU</span> did not complete the
                     steps required to pursue Phase 2, and{" "}
                     <strong className="font-extrabold">
