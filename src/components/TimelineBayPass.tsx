@@ -64,17 +64,32 @@ export default function TimelineBaypass() {
             ),
         },
         {
+            title: "Jan 2026",
+            content: (
+                <p>
+                    <strong className="block font-extrabold mb-1">
+                        IRA Fee Development Begins
+                    </strong>
+                    SJSU launches the <span className="font-extrabold text-sjsugold">
+                        Instructionally Related Activities (IRA) fee consultation process
+                    </span>. The proposed <strong className="font-extrabold">$184.50 per semester fee</strong> includes{" "}
+                    <span className="font-extrabold text-augblue">BayPass</span> at <strong>$25 per semester</strong>, 
+                    plus funding for athletics, intramurals, Spartan Daily, and student engagement programs. 
+                    Students gather in <strong>open forums and focus groups</strong> to provide feedback on the fee proposal.
+                </p>
+            ),
+        },
+        {
             title: "Now",
             content: (
                 <p>
-                    <strong className="block font-extrabold mb-1">Looking forward</strong>
-                    We are continuing to organize for equitable, region-wide transit access at{" "}
-                    <span className="font-extrabold text-sjsugold">SJSU</span> and pressing for a
-                    clear process and timeline on{" "}
-                    <span className="font-extrabold text-augblue">BayPass</span>.
+                    <strong className="block font-extrabold mb-1">Make Your Voice Heard</strong>
+                    The consultation process is ongoing. We are organizing for equitable, region-wide transit access at{" "}
+                    <span className="font-extrabold text-sjsugold">SJSU</span>. Attend the open forums, fill out the survey, 
+                    and share your feedback on <span className="font-extrabold text-augblue">BayPass</span> and the IRA fee.
                     <br />
-                    <a href="/thanks" className="text-sjsugold font-extrabold">
-                        Join us to help bring BayPass back.
+                    <a href="/ira" className="text-sjsugold font-extrabold">
+                        Learn more about the IRA fee →
                     </a>
                 </p>
             ),

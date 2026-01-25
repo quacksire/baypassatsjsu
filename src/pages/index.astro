@@ -33,7 +33,7 @@ import StatCard from "../components/StatCard";
 	<main>
 		<HeroSectionBaypass />
 
-		<section class='bg-sjsublue'>
+		<section class='bg-sjsublue' id='car-problem'>
 			<div class='sect-title'>
 				<h2 class='text-4xl font-black text-white'>SJSU has a</h2>
 				<h3 class='emph-2l emph-gg decoration-4 underline underline-offset-8 pt-4 pb-8'>
@@ -132,11 +132,8 @@ import StatCard from "../components/StatCard";
 						> across the Bay Area, including <strong
 							class='text-sjsublue font-extrabold'
 							>VTA, BART, Caltrain, AC Transit</strong
-						>, and more. With BayPass, students get unlimited rides
-						on public transit for no more than
-						<strong class='text-sjsublue font-extrabold'
-							>$50 per semester</strong
-						>.
+						>, and more. With BayPass part of the proposed <strong class='text-sjsublue font-extrabold'>$184.50 per semester IRA fee</strong>,
+						students get unlimited access to transit across the entire Bay Area.
 					</p>
 					<p>
 						<strong class='text-sjsublue font-extrabold'
@@ -243,42 +240,10 @@ import StatCard from "../components/StatCard";
 				Compared to Other Universities
 			</h2>
 			<h2 class="text-center mt-[-3] mb-8 text-2xl md:text-3xl font-semibold text-sjsugold">
-				We have the best deal, by far.
+				Affordable transit for every Spartan.
 			</h2>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-black text-lg">
-				<!-- SJSU -->
-				<div class="rounded-xl border-4 border-sjsugold bg-yellow-50 p-6 flex flex-col justify-between hover:shadow-lg">
-					<div>
-						<h3 class="text-2xl font-extrabold text-sjsublue mb-4 text-left">
-							San José State University
-						</h3>
-						<div class="flex flex-col gap-1 text-lg">
-							<div class="flex justify-between">
-            <span>
-              <strong class="text-sjsublue text-xl font-black">BayPass</strong> Fee
-            </span>
-								<span class="font-semibold">$25.00</span>
-							</div>
-							<div class="flex justify-between">
-								<span>SmartPass (VTA)</span>
-								<span class="font-semibold">$20.00</span>
-							</div>
-						</div>
-						<p class="mt-3 text-sm text-neutral-600 text-left">
-							ETA: <strong>Spring 2026</strong>
-						</p>
-					</div>
-					<div class="pt-4 border-t border-neutral-200 text-right mt-6">
-						<div class="text-4xl font-black text-sjsugold">
-							$45.00<span class="text-black align-top text-base">*</span>
-						</div>
-						<div class="text-xs tracking-wider text-neutral-600 uppercase">
-							per semester
-						</div>
-					</div>
-				</div>
-
 				<!-- SFSU -->
 				<div class="rounded-xl border-2 border-neutral-200 bg-white p-6 shadow-sm flex flex-col justify-between hover:shadow-lg">
 					<div>
@@ -300,6 +265,41 @@ import StatCard from "../components/StatCard";
 					</div>
 					<div class="pt-4 border-t border-neutral-200 text-right mt-6">
 						<div class="text-4xl font-black text-clipper">$130.00</div>
+						<div class="text-xs tracking-wider text-neutral-600 uppercase">
+							per semester
+						</div>
+					</div>
+				</div>
+
+				<!-- SJSU -->
+				<div class="rounded-xl border-4 border-sjsugold bg-yellow-50 p-6 flex flex-col justify-between hover:shadow-lg">
+					<div>
+						<h3 class="text-2xl font-extrabold text-sjsublue mb-4 text-left">
+							San José State University
+						</h3>
+						<div class="flex flex-col gap-1 text-lg">
+							<div class="flex justify-between">
+				<span>
+				Proposed <strong class="text-sjsublue text-xl font-black">IRA Fee</strong> (includes <strong class="text-clipper">BayPass</strong>)
+				</span>
+								<span class="font-semibold">$184.00</span>
+							</div>
+							<div class="flex justify-between">
+				<span>
+				SmartPass (VTA)
+				</span>
+								<span class="font-semibold">$20.00</span>
+							</div>
+						</div>
+						<p class="mt-3 text-sm text-neutral-600 text-left">
+							Status: <strong>Consultation in progress</strong><br/>
+							Target: <strong>Fall 2026</strong>
+						</p>
+					</div>
+					<div class="pt-4 border-t border-neutral-200 text-right mt-6">
+						<div class="text-4xl font-black text-sjsugold">
+							$184.00<span class="text-black align-top text-base">*</span>
+						</div>
 						<div class="text-xs tracking-wider text-neutral-600 uppercase">
 							per semester
 						</div>
@@ -347,15 +347,9 @@ import StatCard from "../components/StatCard";
 
 			<!-- Footnote -->
 			<p class="max-w-3xl mx-auto mt-8 text-sm text-neutral-600 text-center leading-relaxed">
-				<span class="font-black text-black">*</span> The{" "}
-				<span class="font-semibold text-sjsugold">SmartPass</span> fee would still apply
-				until the{" "}
-				<span class="font-semibold text-clipper">BayPass</span> program is fully
-				solidified by the Metropolitan Transportation Commission (MTC). The{" "}
-				<span class="font-semibold text-clipper">BayPass</span> fee of up to
-				<strong> $50</strong> per year is an estimate and may change once the
-				final pricing is determined by the Campus Fee Advisory Committee and/or approved by student
-				vote.
+				<span class="font-black text-black">*</span> <span class="font-semibold text-clipper">BayPass</span> is included in the proposed
+				<strong>$184.50 per semester Instructionally Related Activities (IRA) fee</strong>, which also funds athletics, intramurals,
+				Spartan Daily, and student engagement programs. The exact allocation for BayPass will be determined through the ongoing consultation process to gather student feedback.
 			</p>
 		</section>
 
@@ -379,7 +373,7 @@ import StatCard from "../components/StatCard";
 					>access to education should be a <strong
 						class='text-sjsugold'>RIGHT</strong
 					></strong
-				> — not dependent on owning a car.
+				> - not dependent on owning a car.
 			</p>
 
 			<!-- Profiles -->

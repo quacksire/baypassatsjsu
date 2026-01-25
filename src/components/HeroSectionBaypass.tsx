@@ -33,16 +33,16 @@ export default function HeroSectionBaypass() {
 
                     <div className="mt-10">
                         <a
-                            href="https://sjsu.qualtrics.com/jfe/form/SV_bDvakzIZSe3K3mm?source=Website"
+                            href="/ira"
                             className="button inline-block rounded-full px-8 py-4 text-sm md:text-base font-extrabold uppercase"
                         >
-                            Sign the Petition
+                            Learn About the IRA Fee
                         </a>
                         <a
-                            href="/thanks"
+                            href="#car-problem"
                             className="ml-4 mt-4 md:mt-20 md:pt-10 block md:inline font-extrabold text-sm text-sjsugold hover:text-augblue active:text-sjsublue transition"
                         >
-                            Already signed? &gt;
+                            What's BayPass? &gt;
                         </a>
                     </div>
 

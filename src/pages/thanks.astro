@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
+import { IconMail, IconCalendarEvent, IconShare2, IconInfoCircle } from "@tabler/icons-react";
 ---
 
 <Layout
@@ -14,13 +14,12 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
 				<h1
 					class='text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)]'
 				>
-					thanks for signing
+					Make Your Voice Heard
 				</h1>
 				<h2
 					class='mt-2 text-2xl md:text-3xl font-semibold text-sjsugold'
 				>
-					You just added your name to a growing movement for
-					affordable, unlimited transit at SJSU.
+					Your feedback shapes how BayPass becomes a reality at SJSU.
 				</h2>
 			</div>
 		</section>
@@ -30,49 +29,18 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
 			<div class='max-w-7xl mx-auto'>
 				<div class='mx-auto max-w-5xl mb-10 text-clipper text-lg'>
 					<p>
-						Your signature is a powerful step toward making this a
-						reality. We still need your help to keep the momentum
-						going.
+						The IRA fee consultation process is happening now. Student feedback directly shapes how 
+						BayPass and other programs are implemented. Attend the forums, fill out the survey, and 
+						tell SJSU what you think.
 					</p>
 				</div>
 				<p
 					class='mx-auto max-w-3xl text-lg text-sjsugold text-center font-bold leading-relaxed mb-5'
 				>
-					Here's what you can do to help out!
+					Here's how to get involved!
 				</p>
 				<!-- Card grid -->
 				<div class='grid grid-cols-1 gap-8 md:grid-cols-2'>
-					<!-- Share -->
-					<div
-						class='rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col'
-					>
-						<div class='flex items-center gap-3 mb-4'>
-							<IconShare2
-								className='h-8 w-8 text-sjsugold'
-								strokeWidth={2.5}
-							/>
-							<h3 class='text-2xl font-black text-sjsugold'>
-								Share
-							</h3>
-						</div>
-						<p class='text-clipper'>
-							Help us spread the petition and survey. Share with
-							classmates, clubs, and group chats. More signatures
-							and responses make the message to SJSU unmistakable.
-						</p>
-						<ul class='mt-4 list-disc pl-5 text-clipper space-y-1'>
-							<li>Ready-to-post text and links</li>
-							<li>Post to Bluesky, Instagram, or anywhere</li>
-							<li>Ask two friends to sign today</li>
-						</ul>
-						<!-- we want to pin the button to the bottom of the div -->
-						<button
-							id='share'
-							class='button mt-12 inline-block rounded-xl px-5 py-3 font-black uppercase tracking-wide'
-						>
-							share on social media
-						</button>
-					</div>
 
 					<!-- Email
 					<div
@@ -132,11 +100,34 @@ import { IconMail, IconCalendarEvent, IconShare2 } from "@tabler/icons-react";
 							<li>Show up with other students</li>
 							<li>Be visible and be heard</li>
 						</ul>
+					</div>
+
+					<!-- Learn about the IRA Fee -->
+					<div
+						class='rounded-2xl border-2 border-sjsugold bg-white p-8 shade-color-sjsugold drop-6 flex flex-col'
+					>
+						<div class='flex items-center gap-3 mb-4'>
+							<IconInfoCircle
+								className='h-8 w-8 text-sjsugold'
+								strokeWidth={2.5}
+							/>
+							<h3 class='text-2xl font-black text-sjsugold'>
+								Learn About the IRA Fee
+							</h3>
+						</div>
+						<p class='text-clipper'>
+							The path to BayPass runs through the proposed Instructionally Related Activities (IRA) fee. Understand the proposal, the consultation process, and how you can make your voice heard.
+						</p>
+						<ul class='mt-4 list-disc pl-5 text-clipper space-y-1'>
+							<li>What the IRA fee funds</li>
+							<li>How the consultation process works</li>
+							<li>Upcoming forums and focus groups</li>
+						</ul>
 						<a
-							href='/meetings'
+							href='/ira'
 							class='button mt-12 inline-block rounded-xl px-5 py-3 font-black uppercase tracking-wide'
 						>
-							see upcoming meetings
+							learn more about the ira fee
 						</a>
 					</div>
 				</div>

@@ -94,7 +94,7 @@ export default function BaypassImpactCharts() {
                     Transfers Between Agencies Skyrocketed
                 </p>
                 <p className="text-lg text-neutral-700">
-                    BayPass encouraged complex, multi-agency trips — real
+                    BayPass encouraged complex, multi-agency trips - real
                     regional use.
                 </p>
                 <div className="h-[200px]">
