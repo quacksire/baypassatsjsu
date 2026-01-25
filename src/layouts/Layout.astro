@@ -36,15 +36,17 @@
 			<NavbarBaypass client:load/>
 			<slot />
 
-			<PersistentToast
-				client:load
-				title="The IRA Fee"
-				message="SJSU is proposing a new $184.50 per semester fee that includes BayPass and unlimited transit access across 23+ Bay Area agencies."
-				actionText="Learn More"
-				actionUrl="/ira"
-				variant="default"
-				storageKey="ira-fee-toast-dismissed"
-			/>
+			{!Astro.url.pathname.startsWith('/ira') && (
+				<PersistentToast
+					client:load
+					title="The IRA Fee"
+					message="SJSU is proposing a new $184.50 per semester fee that includes BayPass and unlimited transit access across 23+ Bay Area agencies."
+					actionText="Learn More"
+					actionUrl="/ira"
+					variant="default"
+					storageKey="ira-fee-toast-dismissed"
+				/>
+			)}
 
 			<!--
 			<PersistentToast
