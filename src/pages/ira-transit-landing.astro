@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Loading - BayPass at SJSU"
+    description="Redirecting to IRA page..."
+>
+    <main class="w-full h-screen flex items-center justify-center bg-sjsublue">
+        <div class="text-center">
+            <div class="mb-8">
+                <div class="inline-flex items-center justify-center">
+                    <div class="w-12 h-12 rounded-full border-4 border-white border-t-sjsugold animate-spin"></div>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-black text-white">Loading...</h1>
+        </div>
+    </main>
+</Layout>
+
+<script is:inline>
+    function checkInsightsAndRedirect() {
+        // Check if Cloudflare Insights has loaded
+        if (window.__cf_beacon !== undefined) {
+            window.location.href = '/ira';
+        }
+    }
+
+    // Check for Insights periodically
+    const checkInterval = setInterval(checkInsightsAndRedirect, 100);
+
+    // Fallback: redirect after 2.5 seconds regardless
+    setTimeout(() => {
+        clearInterval(checkInterval);
+        window.location.href = '/ira';
+    }, 2500);
+</script>
