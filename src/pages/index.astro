@@ -16,7 +16,7 @@ import personprofile from "../assets/person.jpg";
 import samprofile from "../assets/sam-jeffs.jpg";
 import zyjayprofile from "../assets/zyjay-cruz.jpg";
 
-import { IconMail, IconBrandLinkedin } from "@tabler/icons-react";
+import { IconMail, IconBrandLinkedin, IconParkingCircle } from "@tabler/icons-react";
 
 import catenarylogo from "../assets/supporters/catenary.png";
 import scc4transitlogo from "../assets/supporters/scc4transit.png";
@@ -160,6 +160,32 @@ import StatCard from "../components/StatCard";
 		</section>
 
 		<BaypassMapSection />
+
+		<section class='bg-white'>
+			<h2 class='sect-title emph-m emph-bb'>
+				Parking for Those Who Need It
+			</h2>
+
+			<div class='flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between'>
+				<!-- Left: Text -->
+				<div class='md:w-1/2 text-lg text-black space-y-6'>
+					<p>
+						Every day, students struggle to find parking on campus. With <strong class='text-sjsublue font-extrabold'>widespread BayPass adoption, fewer students will drive to campus</strong>. This reduces demand on parking structures, making it significantly easier for those who still need to drive to find available spots quickly.
+					</p>
+					<p>
+						<strong class='text-sjsublue font-extrabold'>Everyone wins:</strong> Transit users save thousands per semester, drivers find parking faster, and campus parking works more efficiently for those who need it most.
+					</p>
+				</div>
+
+				<!-- Right: Icon Box -->
+				<div class='md:w-1/2 flex justify-center'>
+					<div class='bg-sjsugold rounded-xl p-12 text-center flex flex-col items-center justify-center'>
+						<IconParkingCircle className='w-24 h-24 text-sjsublue mb-4' />
+						<div class='text-2xl font-black text-sjsublue'>More spots available faster</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<section class='bg-sjsublue'>
 			<!-- Section Title -->

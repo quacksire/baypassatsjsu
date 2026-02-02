@@ -126,7 +126,7 @@ import { IconMapPin, IconCalendar, IconAlertCircle, IconCheck, IconArrowRight, I
                                 </div>
                                 <div class="flex items-center gap-3">
                                     <IconParkingCircle className="w-8 h-8 text-sjsugold shrink-0" />
-                                    <span class="text-lg font-semibold">Drivers avoid parking stress</span>
+                                    <span class="text-lg font-semibold">Parking relief for those who need it</span>
                                 </div>
                                 <div class="flex items-center gap-3">
                                     <IconBriefcase className="w-8 h-8 text-sjsugold shrink-0" />
@@ -138,7 +138,7 @@ import { IconMapPin, IconCalendar, IconAlertCircle, IconCheck, IconArrowRight, I
                     <div class="md:w-1/2 text-white text-lg space-y-4">
                         <h3 class="text-3xl font-black text-sjsugold">Benefits Everyone</h3>
                         <p>
-                            Transit commuters save thousands per semester. Drivers avoid parking headaches and expensive permit costs. Local students gain access to <strong>job and internship opportunities throughout the Bay Area</strong>.
+                            Transit commuters save thousands per semester. As more students use BayPass for transit, parking structures experience reduced demand, making it easier for those who still need to drive to find spots quickly. Local students gain access to <strong>job and internship opportunities throughout the Bay Area</strong>.
                         </p>
                         <p>
                             No matter how you get to campus, BayPass helps.
@@ -185,6 +185,25 @@ import { IconMapPin, IconCalendar, IconAlertCircle, IconCheck, IconArrowRight, I
                         </p>
                     </div>
                 </div>
+
+                <!-- Item 5: Parking for Those Who Need It -->
+                <div class="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between">
+                    <div class="md:w-1/2 text-white text-lg space-y-4">
+                        <h3 class="text-3xl font-black text-sjsugold">Parking for Those Who Need It</h3>
+                        <p>
+                            With widespread BayPass adoption, fewer students will drive to campus. This reduces demand on parking structures, making it significantly easier for those who <strong>still need to drive</strong> to find available spots quickly.
+                        </p>
+                        <p>
+                            Everyone wins: transit users save money, drivers find parking faster, and campus parking works more efficiently.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-xl p-8 text-center">
+                            <IconParkingCircle className="w-16 h-16 text-sjsugold mx-auto mb-4" />
+                            <div class="text-white text-lg font-semibold">More spots available faster</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -229,28 +248,32 @@ import { IconMapPin, IconCalendar, IconAlertCircle, IconCheck, IconArrowRight, I
                             <div>
                                 <h3 class="text-2xl font-bold text-white mb-3">Attend the Open Forums (Most Important)</h3>
                                 <p class="text-white/90 mb-6">
-                                    Attend one of the two open forums in hybrid format (in-person or Zoom) to share your feedback on BayPass and the IRA fee.
+                                    Attend the open forum happening in a hybrid format (in-person or Zoom) to share your feedback on BayPass and the IRA fee.
                                 </p>
 
                                 <div class="space-y-4 bg-white/5 rounded-lg p-4">
-                                    <div class="flex items-start gap-3">
-                                         <IconCalendar className="w-5 h-5 text-sjsugold shrink-0 mt-1" />
-                                         <div>
-                                             <p class="font-semibold text-white">Tuesday, January 27th, 4–6 PM</p>
-                                             <p class="text-sm text-white/70">Student Union Theatre (downstairs near Starbucks/bowling)</p>
-                                             <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NXI0cmRqaDBtYnJmYXVoOGFvYzlxMDI4N2cgc2FtLmplZmZzQHNqc3UuZWR1&tmsrc=sam.jeffs%40sjsu.edu" target="_blank" rel="noopener noreferrer" class="text-sjsugold font-semibold text-sm underline">Add to Calendar →</a>
-                                         </div>
-                                     </div>
+                                     <div class="flex items-start gap-3">
+                                          <IconCalendar className="w-5 h-5 text-sjsugold shrink-0 mt-1" />
+                                          <div>
+                                              <p class="font-semibold text-white">Tuesday, February 3rd, 4:30–5:30 PM</p>
+                                              <p class="text-sm text-white/70">Open Forum - Virtual (Zoom) Q&A</p>
+                                              <p class="text-xs text-white/60 mt-2">Join a virtual Q&A to learn about the proposed IRA fee, ask questions of campus experts, and get directed to the online survey to share your feedback.</p>
+                                              <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NWlkbG5kMXRvZ2tmYjFra2pub2xrN2Zybzcgc2FtLmplZmZzQHNqc3UuZWR1&tmsrc=sam.jeffs%40sjsu.edu" target="_blank" rel="noopener noreferrer" class="text-sjsugold font-semibold text-sm underline event-add-link" data-date="2026-02-03">Add to Calendar →</a>
+                                              <a href="https://sjsu.zoom.us/j/87824419265?pwd=K9n1L7L0vrlH94N0baeNkAHesc2aJb.1&jst=2" target="_blank" rel="noopener noreferrer" class="text-sjsugold font-semibold text-sm underline event-join-link" data-date="2026-02-03">Get Zoom Link →</a>
+                                          </div>
+                                      </div>
 
-                                    <div class="flex items-start gap-3">
-                                         <IconCalendar className="w-5 h-5 text-sjsugold shrink-0 mt-1" />
-                                         <div>
-                                             <p class="font-semibold text-white">Tuesday, February 10th, 12–1:30 PM</p>
-                                             <p class="text-sm text-white/70">Student Union Theatre (downstairs near Starbucks/bowling)</p>
-                                             <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDZoM3E2ZXQxOWZpcG4xajRkdTdmNzRlZHAgc2FtLmplZmZzQHNqc3UuZWR1&tmsrc=sam.jeffs%40sjsu.edu" target="_blank" rel="noopener noreferrer" class="text-sjsugold font-semibold text-sm underline">Add to Calendar →</a>
-                                         </div>
-                                     </div>
-                                </div>
+                                     <div class="border-t border-white/20 pt-4 flex items-start gap-3">
+                                          <IconCalendar className="w-5 h-5 text-sjsugold shrink-0 mt-1" />
+                                          <div>
+                                              <p class="font-semibold text-white">Tuesday, February 10th, 12–1:30 PM</p>
+                                              <p class="text-sm text-white/70">Open Forum - In-Person (Student Union Theatre)</p>
+                                              <p class="text-xs text-white/60 mt-2">Downstairs near Starbucks/bowling</p>
+                                              <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MDZoM3E2ZXQxOWZpcG4xajRkdTdmNzRlZHAgc2FtLmplZmZzQHNqc3UuZWR1&tmsrc=sam.jeffs%40sjsu.edu" target="_blank" rel="noopener noreferrer" class="text-sjsugold font-semibold text-sm underline event-add-link" data-date="2026-02-10">Add to Calendar →</a>
+                                              <a href="https://sjsu.zoom.us/j/87383733840?pwd=agxs76sO5El5DwREbPasW3cuKMBOO8.1" target="_blank" rel="noopener noreferrer" class="text-sjsugold font-semibold text-sm underline event-join-link" data-date="2026-02-10">Join the Zoom →</a>
+                                          </div>
+                                      </div>
+                                 </div>
 
                                 <p class="text-white/80 text-sm mt-4">
                                     <strong>In-person attendance is recommended</strong>, but either format works. Pick whichever fits your schedule.
@@ -288,15 +311,53 @@ import { IconMapPin, IconCalendar, IconAlertCircle, IconCheck, IconArrowRight, I
                                 <p class="text-white/90 mb-4">
                                     If you're part of any of these groups, attend the focus group session for additional feedback opportunities:
                                 </p>
-                                <ul class="text-white/90 space-y-2 mb-4">
-                                    <li>Housing students</li>
-                                    <li>Student employees</li>
-                                    <li>Athletes</li>
-                                    <li>RSO/club leadership</li>
-                                    <li>Greek Life members</li>
-                                    <li>Educational Opportunity Program (EOP) students</li>
-                                    <li>Cultural Center members (BLOC, CAPISE, MOSAIC, PRIDE, etc.)</li>
-                                </ul>
+                                <div class="text-white/90 space-y-3 mb-4 bg-white/5 rounded-lg p-4">
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 3, 2026</p>
+                                        <p class="text-sm">Housing - Theme Community Residents</p>
+                                        <p class="text-sm font-medium">10:00 a.m. to 10:50 a.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 4, 2026</p>
+                                        <p class="text-sm">Housing - RA Council, RHA, & Student Staff</p>
+                                        <p class="text-sm font-medium">2:00 p.m. to 2:50 p.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 5, 2026</p>
+                                        <p class="text-sm">Student Employees</p>
+                                        <p class="text-sm font-medium">12:00 p.m. to 1:00 p.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 6, 2026</p>
+                                        <p class="text-sm">Housing Residents</p>
+                                        <p class="text-sm font-medium">2:00 p.m. to 2:50 p.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 9, 2026</p>
+                                        <p class="text-sm">Athletes</p>
+                                        <p class="text-sm font-medium">6:00 p.m. to 7:00 p.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 10, 2026</p>
+                                        <p class="text-sm">Associated Student Affiliates</p>
+                                        <p class="text-sm font-medium">1:30 p.m. to 2:30 p.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 16, 2026</p>
+                                        <p class="text-sm">Clubs and Orgs, Greek Life</p>
+                                        <p class="text-sm font-medium">5:30 p.m. to 6:30 p.m.</p>
+                                    </div>
+                                    <div class="border-b border-white/20 pb-3">
+                                        <p class="font-semibold">Feb 17, 2026</p>
+                                        <p class="text-sm">Cultural Centers, EOP, Guardian Scholars</p>
+                                        <p class="text-sm font-medium">12:30 p.m. to 1:30 p.m.</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Feb 19, 2026</p>
+                                        <p class="text-sm">SUI Board of Directors</p>
+                                        <p class="text-sm font-medium">1:15 p.m. to 2:45 p.m.</p>
+                                    </div>
+                                </div>
                                 <p class="text-white/80 text-sm mb-3">
                                     All focus groups happen within the first 3 weeks of February.
                                 </p>
@@ -377,6 +438,39 @@ import { IconMapPin, IconCalendar, IconAlertCircle, IconCheck, IconArrowRight, I
 </Layout>
 
 <script is:inline>
+    // Handle event links visibility based on date
+    function updateEventLinks() {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        // "Add to Calendar" links: hide on and after the event date
+        const addLinks = document.querySelectorAll('.event-add-link');
+        addLinks.forEach(link => {
+            const dateStr = link.getAttribute('data-date');
+            if (dateStr) {
+                const eventDate = new Date(dateStr + 'T00:00:00');
+                if (today >= eventDate) {
+                    link.style.display = 'none';
+                }
+            }
+        });
+
+        // "Join" links: hide before and after the event date
+        const joinLinks = document.querySelectorAll('.event-join-link');
+        joinLinks.forEach(link => {
+            const dateStr = link.getAttribute('data-date');
+            if (dateStr) {
+                const eventDate = new Date(dateStr + 'T00:00:00');
+                const eventDateEnd = new Date(dateStr + 'T23:59:59');
+                if (today < eventDate || today > eventDateEnd) {
+                    link.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    updateEventLinks();
+
     const shareButton = document.getElementById("share");
     if (shareButton) {
         shareButton.addEventListener("click", () => {
