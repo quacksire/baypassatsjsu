@@ -1,0 +1,291 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+    IconDeviceMobile,
+    IconCreditCard,
+    IconCheck,
+    IconTrain,
+} from "@tabler/icons-react";
+---
+
+<Layout
+        title="Get BayPass | SJSU"
+        description="Learn how BayPass will work for SJSU students."
+>
+    <main>
+        <!-- Hero -->
+        <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+            <div class="mx-auto max-w-5xl text-center mt-15">
+                <h1 class="text-5xl uppercase text-white font-extrabold drop-shadow-[1.5px_1.5px_0_var(--color-auggold)] md:text-6xl">
+                    Get BayPass
+                </h1>
+                <h2 class="mt-3 text-2xl md:text-3xl font-semibold text-sjsugold">
+                    BayPass starts working for SJSU students on August 15, 2026.
+                </h2>
+                <p class="mx-auto mt-6 max-w-3xl text-lg text-white md:text-xl">
+                    Existing student VTA SmartPasses will become BayPass on the same Clipper card. No action is needed from students.
+                </p>
+
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                    <a
+                            href="#how"
+                            class="inline-block rounded-xl bg-white px-6 py-3 font-black uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5"
+                    >
+                        How it works
+                    </a>
+                    <a
+                            href="/ira"
+                            class="inline-block rounded-xl border-2 border-white px-6 py-3 font-black uppercase tracking-wide text-white transition hover:bg-white/10"
+                    >
+                        What the IRA means
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro -->
+        <section class="w-full bg-white px-6 py-12 md:px-12 lg:px-24">
+            <div class="max-w-5xl mx-auto space-y-6 text-lg text-black">
+                <p>
+                    For students who already have a VTA SmartPass, BayPass is designed to show up on that same Clipper card when the program starts. You do not need to submit a new form or request a separate pass.
+                </p>
+
+                <div class="rounded-2xl border-2 border-sjsugold bg-yellow-50 p-6">
+                    <p class="text-lg leading-relaxed">
+                        <strong class="text-sjsublue">Important:</strong> Keep using the Clipper card connected to your student SmartPass. That is the card expected to become BayPass.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how" class="w-full bg-neutral-50 px-6 py-16 md:px-12 lg:px-24">
+            <div class="mx-auto max-w-6xl">
+                <h2 class="text-center text-4xl font-black text-sjsublue mb-4">
+                    How It Works
+                </h2>
+                <p class="mx-auto max-w-3xl text-center text-lg text-neutral-700 mb-12">
+                    BayPass replaces the student SmartPass experience with region-wide access across participating Bay Area transit agencies.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl border-2 border-neutral-200 bg-white p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-sjsugold text-sjsublue font-black text-xl">
+                                1
+                            </div>
+                            <h3 class="text-2xl font-black text-sjsublue">Use Your SmartPass Card</h3>
+                        </div>
+                        <p class="text-lg text-neutral-700 leading-relaxed">
+                            If you already have a student VTA SmartPass, keep using that same physical or digital Clipper card.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl border-2 border-neutral-200 bg-white p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-sjsugold text-sjsublue font-black text-xl">
+                                2
+                            </div>
+                            <h3 class="text-2xl font-black text-sjsublue">BayPass Is Added</h3>
+                        </div>
+                        <p class="text-lg text-neutral-700 leading-relaxed">
+                            Student SmartPasses will be turned into BayPass automatically. No new form is needed.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl border-2 border-neutral-200 bg-white p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-sjsugold text-sjsublue font-black text-xl">
+                                3
+                            </div>
+                            <h3 class="text-2xl font-black text-sjsublue">Ride with BayPass</h3>
+                        </div>
+                        <p class="text-lg text-neutral-700 leading-relaxed">
+                            Starting August 15, 2026, tap your student pass on participating Bay Area transit agencies that accept Clipper.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clipper options -->
+        <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+            <div class="max-w-6xl mx-auto space-y-10">
+                <h2 class="text-4xl font-black text-white text-center">
+                    Don’t Have a Clipper Card?
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="rounded-xl bg-white/10 backdrop-blur border border-white/20 p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconCreditCard className="w-8 h-8 text-sjsugold shrink-0" />
+                            <h3 class="text-2xl font-black text-sjsugold">Get a Physical Card</h3>
+                        </div>
+                        <p class="text-lg text-white/90 leading-relaxed">
+                            Purchase a physical Clipper card in person at a station, ticket machine, or other Clipper retail location.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl bg-white/10 backdrop-blur border border-white/20 p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconDeviceMobile className="w-8 h-8 text-sjsugold shrink-0" />
+                            <h3 class="text-2xl font-black text-sjsugold">Use Mobile Wallet</h3>
+                        </div>
+                        <p class="text-lg text-white/90 leading-relaxed">
+                            Create a digital Clipper card and add it to your mobile wallet through the Clipper app.
+                        </p>
+                        <p class="text-sm text-white/70 mt-4 leading-relaxed">
+                            Make sure it is the card connected to your SJSU student transit access.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-white/10 p-6 text-center">
+                    <p class="text-lg text-white">
+                        Physical card or phone, either works. The key is using the card tied to your student transit access.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What you need to do -->
+        <section class="w-full bg-white px-6 py-16 md:px-12 lg:px-24">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-black text-sjsublue mb-12 text-center">
+                    What You Need To Know
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-sjsugold text-sjsublue font-bold text-xl shrink-0">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-sjsublue mb-3">No New Form Needed</h3>
+                                <p class="text-lg text-neutral-700 leading-relaxed">
+                                    Students with an existing VTA SmartPass do not need to submit a separate BayPass form.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-sjsugold text-sjsublue font-bold text-xl shrink-0">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-sjsublue mb-3">Your SmartPass Becomes BayPass</h3>
+                                <p class="text-lg text-neutral-700 leading-relaxed mb-4">
+                                    Your student SmartPass will become BayPass on the same Clipper card when the program starts.
+                                </p>
+                                <div class="rounded-lg border border-sjsugold bg-yellow-50 p-4 text-sm text-neutral-700">
+                                    <strong class="text-sjsublue">Staff and faculty:</strong> your SmartPass stays the same. BayPass is only available to students.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-sjsugold text-sjsublue font-bold text-xl shrink-0">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-sjsublue mb-3">Start Riding August 15</h3>
+                                <p class="text-lg text-neutral-700 leading-relaxed">
+                                    Beginning August 15, 2026, use your student Clipper card on participating Bay Area transit agencies that accept Clipper.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important info cards -->
+        <section class="w-full bg-neutral-50 px-6 py-16 md:px-12 lg:px-24">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-center text-4xl font-black text-sjsublue mb-12">
+                    Important Things to Know
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconCheck className="w-7 h-7 text-sjsugold shrink-0" />
+                            <h3 class="text-xl font-black text-sjsublue">Student pass only</h3>
+                        </div>
+                        <p class="text-base leading-relaxed text-neutral-700">
+                            BayPass is for enrolled SJSU students and is connected to student transit access.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconCheck className="w-7 h-7 text-sjsugold shrink-0" />
+                            <h3 class="text-xl font-black text-sjsublue">Use your SmartPass card</h3>
+                        </div>
+                        <p class="text-base leading-relaxed text-neutral-700">
+                            If you have a student SmartPass, keep using that same Clipper card.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconCheck className="w-7 h-7 text-sjsugold shrink-0" />
+                            <h3 class="text-xl font-black text-sjsublue">Region-wide access</h3>
+                        </div>
+                        <p class="text-base leading-relaxed text-neutral-700">
+                            BayPass works on participating bus, rail, and ferry services across the nine-county Bay Area region.
+                        </p>
+                    </div>
+
+                    <div class="rounded-xl border-2 border-neutral-200 bg-white p-8 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <IconCheck className="w-7 h-7 text-sjsugold shrink-0" />
+                            <h3 class="text-xl font-black text-sjsublue">Need help?</h3>
+                        </div>
+                        <p class="text-base leading-relaxed text-neutral-700">
+                            If your student transit card is lost, replaced, or not working, watch for official SJSU support instructions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotlight / info banner -->
+        <section class="w-full bg-sjsublue px-6 py-16 md:px-12 lg:px-24">
+            <div class="mx-auto max-w-4xl">
+                <div class="rounded-2xl border-2 border-sjsugold bg-white/10 p-8 text-center">
+                    <div class="flex justify-center mb-4">
+                        <IconTrain className="w-12 h-12 text-sjsugold" />
+                    </div>
+                    <h2 class="text-3xl font-black text-white mb-4">
+                        BayPass starts on August 15
+                    </h2>
+                    <p class="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
+                        No in-person pickup is needed. Existing student SmartPasses will move to BayPass, and students can start tapping into region-wide transit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="bg-sjsugold py-12 px-6 md:px-12 lg:px-24 text-center">
+                <h3 class="text-3xl font-extrabold text-white mb-4">
+                Ready to Ride?
+            </h3>
+            <p class="text-lg text-white max-w-3xl mx-auto mb-6 leading-relaxed">
+                Keep your student SmartPass card handy. BayPass starts working for students on August 15, 2026.
+            </p>
+            <a
+                    href="/ira"
+                    class="inline-block rounded-xl font-bold bg-white px-5 py-3 uppercase tracking-wide text-sjsublue shadow-md transition-transform hover:-translate-y-0.5"
+            >
+                What the IRA Means
+            </a>
+        </section>
+    </main>
+</Layout>

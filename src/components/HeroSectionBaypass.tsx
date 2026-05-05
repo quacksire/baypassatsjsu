@@ -36,7 +36,7 @@ export default function HeroSectionBaypass() {
                             href="/ira"
                             className="button inline-block rounded-full px-8 py-4 text-sm md:text-base font-extrabold uppercase"
                         >
-                            Learn About the IRA Fee
+                            What the IRA Means Now
                         </a>
                         <a
                             href="#car-problem"
